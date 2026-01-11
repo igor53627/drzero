@@ -74,7 +74,7 @@ Repeat the process using the scripts for the respective iteration. The model che
 *   `iter3_challenger.sh` -> `iter3_gen_data.sh` -> `iter3_solver.sh`
 
 ## License
-The code is released under a non-commercial license. See [LICENSE](LICENSE) for more details.
+The code is released under a non-commercial license. See [LICENSE](LICENSE.md) for more details.
 
 ## Acknowledgements
 
