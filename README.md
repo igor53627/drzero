@@ -1,10 +1,10 @@
-# [Dr. Zero: Self-Evolving Search Agents without Training Data](https://arxiv.org/abs/2601.07055)
+# Dr. Zero: Self-Evolving Search Agents without Training Data
 
 This repository contains the code for [**Dr. Zero: Self-Evolving Search Agents without Training Data**](https://arxiv.org/abs/2601.07055). In this work, we introduce Dr. Zero, a framework enabling search agents to effectively self-evolve without any training data. In particular, we design a self-evolution feedback loop where a proposer generates diverse questions to train a solver initialized from the same base model. As the solver evolves, it incentivizes the proposer to produce increasingly difficult yet solvable tasks, thus establishing an automated curriculum to refine both agents. To enhance training efficiency, we also introduce hop-grouped relative policy optimization (HRPO). This method clusters structurally similar questions to construct group-level baselines, effectively minimizing the sampling overhead in evaluating each query's individual difficulty and solvability. Consequently, HRPO significantly reduces the compute requirements for solver training without compromising performance or stability. Extensive experiment results demonstrate that the data-free Dr. Zero matches or surpasses fully supervised search agents, proving that complex reasoning and search capabilities can emerge solely through self-evolution.
 
 ## 🚀 Overview
 
-The core idea is to bootstrap a search agent from a base model (e.g., Qwen or Llama) through multiple iterations of data-free self-evolution and reinforcement learning in a multi-turn tool-using environment.
+The core idea is to bootstrap a search agent from a base model (e.g., Qwen or Llama) via iterative self-evolution: the agent synthesizes tasks and then learns to solve them in a multi-turn, tool-using environment.
 
 *   **Proposer:** A question generation agent that aims to create hard yet solvable questions and thereby driving the solver improvement.
 *   **Solver:** The primary search agent that is trained with synthetic data from the proposer to answer challenging questions using the search tool.
@@ -32,13 +32,13 @@ cat $save_path/part_* > $save_path/e5_Flat.index
 gzip -d $save_path/wiki-18.jsonl.gz
 ```
 
-## 🔄 Iterative Self-Evolution Workflow
+## 🏃 Iterative Self-Evolution Workflow
 
 The training process proceeds in iterations (Iter 1, Iter 2, Iter 3...). Each iteration typically consists of three phases:
 
 ### Phase 0: Initial Data Preparation
 
-Before the first iteration, prepare the initial synthetic dataset for training and evaluation.
+Before the first iteration, prepare the initial prompts for training and the benchmarks for evaluation.
 
 ```bash
 python process_train.py --local_dir ./data
@@ -54,7 +54,7 @@ Train the proposer agent to generate challenging yet manageable questions for th
 bash iter1_challenger.sh
 ```
 
-**2. Generate Synthetic Data:**
+**2. Synthesize Data:**
 Generate training data using the learnt proposer model. Parameters such as model path and sample size can be specified in the script.
 
 ```bash
@@ -68,7 +68,7 @@ Train the solver agent on the generated synthetic data using GRPO. This optimize
 bash iter1_solver.sh
 ```
 
-**4. Convert Solver to HF Checkpoint:**
+**4. Convert Solver to HF Format:**
 Specify the trained model path and convert the FSDP checkpoint to the HF format. This allows the proposer to load the latest solver for reward estimation in the next training iteration.
 
 ```bash
@@ -82,13 +82,10 @@ Repeat the process using the scripts for the respective iteration. The model che
 *   `iter2_challenger.sh` -> `iter2_gen_data.sh` -> `iter2_solver.sh` -> `convert.sh`
 *   `iter3_challenger.sh` -> `iter3_gen_data.sh` -> `iter3_solver.sh` -> `convert.sh`
 
-## License
-The code is released under a non-commercial license. See [LICENSE](LICENSE.md) for more details.
-
 ## Citation
-Please consider citing if you use our methods in your research:
+If you find Dr. Zero interesting, please consider citing our paper :)
 ```
-@article{yue2026drzero,
+@article{yue2026dr,
   title={Dr. Zero: Self-Evolving Search Agents without Training Data},
   author={Yue, Zhenrui and Upasani, Kartikeya and Yang, Xianjun and Ge, Suyu and Nie, Shaoliang and Mao, Yuning and Liu, Zhe and Wang, Dong},
   journal={arXiv preprint arXiv:2601.07055},
@@ -96,5 +93,8 @@ Please consider citing if you use our methods in your research:
 }
 ```
 
+## License
+The code is released under a non-commercial license. See [LICENSE](LICENSE.md) for more details.
+
 ## Acknowledgements
-During the implementation we base our code mostly on [Search-R1](https://github.com/PeterGriffinJin/Search-R1) and [VeRL](https://github.com/volcengine/verl). Many thanks to these authors for their great work!
+During the implementation we base our code mostly on [Search-R1](https://github.com/PeterGriffinJin/Search-R1) and [VeRL](https://github.com/volcengine/verl). Many thanks to these awesome authors for their great work!
