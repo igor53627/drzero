@@ -29,7 +29,7 @@ image = (
         "chromadb",
         "fastapi",
         "uvicorn",
-        "sglang[all]>=0.4.0",
+        "sglang[srt,openai]==0.5.6",
         "verl>=0.3.0",
         "wandb",
         "huggingface_hub",
