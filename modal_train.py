@@ -254,7 +254,7 @@ def upload_corpus(local_chromadb_path: str):
 )
 def prepare_data(hop_ratio: str = "4321"):
     """
-    Export ChromaDB to JSONL and generate training parquet.
+    Generate training parquet directly from ChromaDB.
     Run this before training to prepare the data.
     """
     import subprocess
@@ -262,27 +262,15 @@ def prepare_data(hop_ratio: str = "4321"):
     
     os.chdir("/root/drzero")
     
-    jsonl_path = f"{CORPUS_PATH}/wiki-18.jsonl"
     data_dir = f"{CORPUS_PATH}/data"
     os.makedirs(data_dir, exist_ok=True)
     
-    # Step 1: Export ChromaDB to JSONL (if not already done)
-    if not os.path.exists(jsonl_path):
-        print("Exporting ChromaDB to JSONL...")
-        subprocess.run([
-            sys.executable, "scripts/export_chromadb_to_jsonl.py",
-            f"--chroma_path={CORPUS_PATH}/chromadb",
-            "--collection=papers",
-            f"--out={jsonl_path}",
-        ], check=True)
-    else:
-        print(f"JSONL already exists at {jsonl_path}")
-    
-    # Step 2: Generate training parquet
-    print("Generating training parquet...")
+    # Generate training parquet using ChromaDB directly
+    print("Generating training parquet from ChromaDB...")
     subprocess.run([
         sys.executable, "process_train.py",
-        f"--corpus_dir={jsonl_path}",
+        f"--chroma_path={CORPUS_PATH}/chromadb",
+        "--collection_name=papers",
         f"--local_dir={data_dir}",
     ], check=True)
     

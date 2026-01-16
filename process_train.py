@@ -28,7 +28,6 @@ from huggingface_hub import hf_hub_download
 from huggingface_hub.utils import EntryNotFoundError
 
 from verl.utils.hdfs_io import copy, makedirs
-from search.index_builder import load_corpus
 from verl.prompts import *
 
 
@@ -39,6 +38,65 @@ logger = logging.getLogger(__name__)
 HOPS = [1, 2, 3, 4]
 HOP_RATIO = [4, 3, 2, 1]
 TOKENIZER = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-3B-Instruct")
+
+
+def load_corpus(corpus_path: str):
+    """Load corpus from JSONL file."""
+    import datasets
+    return datasets.load_dataset(
+        'json',
+        data_files=corpus_path,
+        split="train",
+        num_proc=4
+    )
+
+
+def load_corpus_chromadb(chroma_path: str, collection_name: str = "papers"):
+    """
+    Load corpus directly from ChromaDB as an iterable.
+    Returns a dataset-like object that yields {"contents": ...} dicts.
+    """
+    import chromadb
+    
+    client = chromadb.PersistentClient(path=chroma_path)
+    collection = client.get_collection(name=collection_name)
+    total = collection.count()
+    logger.info(f"Loading {total} documents from ChromaDB collection '{collection_name}'")
+    
+    class ChromaCorpus:
+        def __init__(self, collection, total):
+            self.collection = collection
+            self.total = total
+            self._data = None
+        
+        def _load_all(self):
+            if self._data is None:
+                results = self.collection.get(
+                    include=["documents", "metadatas"],
+                    limit=self.total,
+                )
+                self._data = []
+                for i, doc in enumerate(results.get("documents", [])):
+                    meta = results["metadatas"][i] if i < len(results.get("metadatas", [])) else {}
+                    title = meta.get("title", "")
+                    contents = f"{title}\n{doc}" if title else doc
+                    self._data.append({"contents": contents})
+            return self._data
+        
+        def shuffle(self, seed=42):
+            import random
+            data = self._load_all()
+            random.seed(seed)
+            random.shuffle(data)
+            return data
+        
+        def __iter__(self):
+            return iter(self._load_all())
+        
+        def __len__(self):
+            return self.total
+    
+    return ChromaCorpus(collection, total)
 
 
 def process_single_row(row, corpus_iter, current_split_name, row_index):
@@ -107,7 +165,13 @@ def main():
     os.makedirs(local_save_dir, exist_ok=True)
 
     processed_files = []
-    corpus_iter = iter(load_corpus(args.corpus_dir).shuffle(seed=42))
+    
+    # Load corpus from ChromaDB or JSONL
+    if args.chroma_path:
+        corpus = load_corpus_chromadb(args.chroma_path, args.collection_name)
+    else:
+        corpus = load_corpus(args.corpus_dir)
+    corpus_iter = iter(corpus.shuffle(seed=42))
 
     # Download and process files using temporary directory
     with tempfile.TemporaryDirectory() as tmp_download_dir:
@@ -171,7 +235,9 @@ if __name__ == "__main__":
         help="Local directory to save the processed Parquet files.",
     )
     parser.add_argument("--hdfs_dir", default=None, help="Optional HDFS directory to copy the Parquet files to.")
-    parser.add_argument("--corpus_dir", default="./corpus/wiki-18.jsonl", help="Path to Wiki corpus data.")
+    parser.add_argument("--corpus_dir", default="./corpus/wiki-18.jsonl", help="Path to Wiki corpus JSONL (if not using ChromaDB).")
+    parser.add_argument("--chroma_path", default=None, help="Path to ChromaDB persistent storage (preferred over corpus_dir).")
+    parser.add_argument("--collection_name", default="papers", help="ChromaDB collection name.")
     args = parser.parse_args()
 
     user_content_prefix = DEFAULT_CHALLENGER_PREFIX
