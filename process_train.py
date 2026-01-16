@@ -85,18 +85,36 @@ def load_corpus_chromadb(chroma_path: str, collection_name: str = "papers"):
         
         def shuffle(self, seed=42):
             import random
-            data = self._load_all()
+            data = self._load_all().copy()
             random.seed(seed)
             random.shuffle(data)
-            return data
+            return CyclingList(data)
         
         def __iter__(self):
-            return iter(self._load_all())
-        
+            return iter(CyclingList(self._load_all()))
+
+
         def __len__(self):
             return self.total
     
     return ChromaCorpus(collection, total)
+
+
+class CyclingList:
+    """Iterator that cycles through a list infinitely."""
+    def __init__(self, data):
+        self.data = data
+        self.index = 0
+    
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if not self.data:
+            raise StopIteration
+        item = self.data[self.index]
+        self.index = (self.index + 1) % len(self.data)
+        return item
 
 
 def process_single_row(row, corpus_iter, current_split_name, row_index):
