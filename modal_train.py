@@ -34,9 +34,8 @@ image = (
         "sentence-transformers",
     )
     .run_commands(
-        "cd /root && git clone https://github.com/facebookresearch/drzero.git",
+        "cd /root && git clone https://github.com/igor53627/drzero.git",
     )
-    .add_local_dir("/Users/user/sources/facebook/drzero/search", "/root/drzero/search")
 )
 
 # Volumes for persistent storage
