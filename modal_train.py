@@ -15,24 +15,15 @@ import os
 app = modal.App("dr-zero-training")
 
 image = (
-    modal.Image.from_registry("nvidia/cuda:12.4.0-devel-ubuntu22.04", add_python="3.11")
-    .apt_install("git", "curl", "libnuma-dev", "build-essential", "ninja-build", "cmake", "python3-dev")
-    .run_commands(
-        "pip install --upgrade --index-url https://download.pytorch.org/whl/cu124 torch torchvision torchaudio",
-    )
+    modal.Image.from_registry("lmsysorg/sglang:v0.5.6-cu129-amd64")
+    .apt_install("git", "curl", "libnuma-dev")
     .pip_install(
-        "transformers>=4.40.0",
         "datasets",
         "pandas",
-        "numpy",
         "faiss-cpu",
         "chromadb",
-        "fastapi",
-        "uvicorn",
-        "sglang[srt,openai]==0.5.6",
         "verl>=0.3.0",
         "wandb",
-        "huggingface_hub",
         "sentence-transformers",
     )
     .add_local_dir(
