@@ -35,8 +35,10 @@ image = (
         "huggingface_hub",
         "sentence-transformers",
     )
-    .run_commands(
-        "cd /root && git clone https://github.com/igor53627/drzero.git",
+    .add_local_dir(
+        ".",
+        remote_path="/root/drzero",
+        ignore=lambda p: any(x in str(p) for x in [".git", "__pycache__", ".pyc", "node_modules"]),
     )
 )
 
@@ -120,9 +122,9 @@ def train_challenger(iteration: int = 1, hop_ratio: str = "4321", model_path: st
         "--log-level=error"
     ])
     
-    # Wait for servers with health checks
+    # Wait for servers with health checks (embedding model load takes time)
     print("Waiting for retrieval server...")
-    if not wait_for_server("http://127.0.0.1:8000/docs", timeout=60):
+    if not wait_for_server("http://127.0.0.1:8000/docs", timeout=180):
         raise RuntimeError("Retrieval server failed to start")
     print("Retrieval server ready")
     
@@ -137,7 +139,7 @@ def train_challenger(iteration: int = 1, hop_ratio: str = "4321", model_path: st
     
     cmd = [
         sys.executable, "-m", "verl.trainer.main_ppo",
-        "--config-path=./config",
+        "--config-path=/root/drzero/config",
         "--config-name=search_multiturn_grpo",
         f"data.train_files={train_data}",
         f"data.val_files={val_data}",
@@ -215,7 +217,7 @@ def train_solver(iteration: int = 1, model_path: str = "Qwen/Qwen2.5-14B-Instruc
     
     cmd = [
         sys.executable, "-m", "verl.trainer.main_ppo",
-        "--config-path=./config",
+        "--config-path=/root/drzero/config",
         "--config-name=search_multiturn_grpo",
         f"data.train_files={train_data}",
         "data.train_batch_size=256",

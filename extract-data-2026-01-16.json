@@ -1,0 +1,1504 @@
+{
+  "papers": [
+    {
+      "title": "Applications of Multilinear Forms to Cryptography",
+      "title_citation": "https://eprint.iacr.org/2002/080.pdf",
+      "authors": [
+        {
+          "value": "Dan Boneh",
+          "value_citation": "https://eprint.iacr.org/2002/080.pdf"
+        },
+        {
+          "value": "Alice Silverberg",
+          "value_citation": "https://eprint.iacr.org/2002/080.pdf"
+        }
+      ],
+      "abstract": "We study the problem of finding efficiently computable non-degenerate multilinear maps from $G _ { 1 } ^ { n }$ to $G _ { 2 }$, where $G _ { 1 }$ and $G _ { 2 }$ are groups of the same prime order, and where computing discrete logarithms in $G _ { 1 }$ is hard. We present several applications to cryptography, explore directions for building such maps, and give some reasons to believe that finding examples with $n > 2$ may be difficult.",
+      "abstract_citation": "https://eprint.iacr.org/2002/080.pdf",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2002/080.pdf"
+    },
+    {
+      "title": "Deniable Functional Encryption",
+      "title_citation": "https://eprint.iacr.org/2015/1205.pdf",
+      "authors": [
+        {
+          "value": "Angelo De Caro",
+          "value_citation": "https://eprint.iacr.org/2015/1205.pdf"
+        },
+        {
+          "value": "Vincenzo Iovino",
+          "value_citation": "https://eprint.iacr.org/2015/1205.pdf"
+        },
+        {
+          "value": "Adam O’Neil",
+          "value_citation": "https://eprint.iacr.org/2015/1205.pdf"
+        }
+      ],
+      "abstract": "The paper initiates the study of deniable encryption for the more general case of functional encryption (FE). The authors propose and motivate the concept of deniable FE under two models: one where a receiver gets assistance from a master authority to generate fake secret keys, and a 'multi-distributional' model where a receiver can produce fake but authentic-looking normal keys independently. The results show that any FE scheme for general circuit functionality can be converted into a receiver-deniable FE scheme in the first model without additional assumptions. For the multi-distributional model, the authors construct a specific FE scheme for general circuits using delayed trapdoor circuits and differing-inputs obfuscation. Furthermore, the paper demonstrates that receiver deniability for FE implies simulation security and provides an efficient receiver-deniable FE for Boolean Formulae from bilinear maps.",
+      "abstract_citation": "https://eprint.iacr.org/2015/1205.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2015/1205.pdf"
+    },
+    {
+      "title": "Witness Encryption and its Applications",
+      "title_citation": "https://eprint.iacr.org/2013/258.pdf",
+      "authors": [
+        {
+          "value": "Sanjam Garg",
+          "value_citation": "https://eprint.iacr.org/2013/258.pdf"
+        },
+        {
+          "value": "Craig Gentry",
+          "value_citation": "https://eprint.iacr.org/2013/258.pdf"
+        },
+        {
+          "value": "Amit Sahai",
+          "value_citation": "https://eprint.iacr.org/2013/258.pdf"
+        },
+        {
+          "value": "Brent Waters",
+          "value_citation": "https://eprint.iacr.org/2013/258.pdf"
+        }
+      ],
+      "abstract": "We put forth the concept of witness encryption. A witness encryption scheme is defined for an NP language L (with corresponding witness relation R). In such a scheme, a user can encrypt a message M to a particular problem instance x to produce a ciphertext. A recipient of a ciphertext is able to decrypt the message if x is in the language and the recipient knows a witness w where R(x, w) holds. However, if x is not in the language, then no polynomial-time attacker can distinguish between encryptions of any two equal length messages. We emphasize that the encrypter himself may have no idea whether x is actually in the language. Our contributions in this paper are threefold. First, we introduce and formally define witness encryption. Second, we show how to build several cryptographic primitives from witness encryption. Finally, we give a candidate construction based on the NP-complete Exact Cover problem and Garg, Gentry, and Halevi’s recent construction of “approximate” multilinear maps. Our method for witness encryption also yields the first candidate construction for an open problem posed by Rudich in 1989: constructing computational secret sharing schemes for an NP-complete access structure.",
+      "abstract_citation": "https://eprint.iacr.org/2013/258.pdf",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2013/258.pdf"
+    },
+    {
+      "title": "Obfuscation from Low Noise Multilinear Maps",
+      "title_citation": "https://eprint.iacr.org/2016/599.pdf",
+      "authors": [
+        {
+          "value": "Nico Döttling",
+          "value_citation": "https://eprint.iacr.org/2016/599.pdf"
+        },
+        {
+          "value": "Sanjam Garg",
+          "value_citation": "https://eprint.iacr.org/2016/599.pdf"
+        },
+        {
+          "value": "Divya Gupta",
+          "value_citation": "https://eprint.iacr.org/2016/599.pdf"
+        },
+        {
+          "value": "Peihan Miao",
+          "value_citation": "https://eprint.iacr.org/2016/599.pdf"
+        },
+        {
+          "value": "Pratyay Mukherjee",
+          "value_citation": "https://eprint.iacr.org/2016/599.pdf"
+        }
+      ],
+      "abstract": "Multilinear maps enable homomorphic computation on encoded values and a public procedure to check if the computation on the encoded values results in a zero. Encodings in known candidate constructions of multilinear maps have a (growing) noise component, which is crucial for security. For example, noise in GGH13 multilinear maps grows with the number of levels that need to be supported and must remain below the maximal noise supported by the multilinear map for correctness. A smaller maximal noise, which must be supported, is desirable both for reasons of security and efficiency. In this work, we put forward new candidate constructions of obfuscation for which the maximal supported noise is polynomial (in the security parameter). Our constructions are obtained by instantiating a modification of Lin’s obfuscation construction (EUROCRYPT 2016) with composite order variants of the GGH13 multilinear maps. For these schemes, we show that the maximal supported noise only needs to grow polynomially in the security parameter. We prove the security of these constructions in the weak multilinear map model that captures all known vulnerabilities of GGH13 maps. Finally, we investigate the security of the considered composite order variants of GGH13 multilinear maps from a cryptanalytic standpoint.",
+      "abstract_citation": "https://eprint.iacr.org/2016/599.pdf",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2016/599.pdf"
+    },
+    {
+      "title": "New Multilinear Maps over the Integers",
+      "title_citation": "https://eprint.iacr.org/2015/162.pdf",
+      "authors": [
+        {
+          "value": "Jean-Sébastien Coron",
+          "value_citation": "https://eprint.iacr.org/2015/162.pdf"
+        },
+        {
+          "value": "Tancrède Lepoint",
+          "value_citation": "https://eprint.iacr.org/2015/162.pdf"
+        },
+        {
+          "value": "Mehdi Tibouchi",
+          "value_citation": "https://eprint.iacr.org/2015/162.pdf"
+        }
+      ],
+      "abstract": "In the last few years, cryptographic multilinear maps have proved their tremendous potential as building blocks for new constructions, in particular the first viable approach to general program obfuscation. After the first candidate construction by Garg, Gentry and Halevi (GGH) based on ideal lattices, a second construction over the integers was described by Coron, Lepoint and Tibouchi (CLT). However the CLT scheme was recently broken by Cheon et al.; the attack works by computing the eigenvalues of a diagonalizable matrix over Q derived from the multilinear map. In this paper we describe a new candidate multilinear map over the integers. Our construction is based on CLT but with a new arithmetic technique that makes the zero-testing element non-linear in the encoding, which prevents the Cheon et al. attack. Our new construction is relatively practical as its efficiency is comparable to the original CLT scheme. Moreover the subgroup membership and decisional linear assumptions appear to hold in the new setting.",
+      "abstract_citation": "https://eprint.iacr.org/2015/162.pdf",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2015/162.pdf"
+    },
+    {
+      "title": "Cryptanalysis on the Multilinear Map over the Integers and its Related Problems",
+      "title_citation": "https://eprint.iacr.org/2014/906.pdf",
+      "authors": [
+        {
+          "value": "Jung Hee Cheon",
+          "value_citation": "https://eprint.iacr.org/2014/906.pdf"
+        },
+        {
+          "value": "Kyoohyung Han",
+          "value_citation": "https://eprint.iacr.org/2014/906.pdf"
+        },
+        {
+          "value": "Changmin Lee",
+          "value_citation": "https://eprint.iacr.org/2014/906.pdf"
+        },
+        {
+          "value": "Hansol Ryu",
+          "value_citation": "https://eprint.iacr.org/2014/906.pdf"
+        },
+        {
+          "value": "Damien Stehlé",
+          "value_citation": "https://eprint.iacr.org/2014/906.pdf"
+        }
+      ],
+      "abstract": "The CRT-ACD problem is to find the primes p_1, ..., p_n given polynomially many instances of CRT_{(p_1, ..., p_n)}(r_1, ..., r_n) for small integers r_1, ..., r_n. The CRT-ACD problem is regarded as a hard problem, but its hardness is not proven yet. In this paper, we analyze the CRT-ACD problem when given one more input CRT_{(p_1, ..., p_n)}(x_0/p_1, ..., x_0/p_n) for x_0 = \\prod_{i=1}^n p_i and propose a polynomial-time algorithm for this problem by using products of the instances and auxiliary input. This algorithm yields a polynomial-time cryptanalysis of the (approximate) multilinear map of Coron, Lepoint and Tibouchi (CLT): We show that by multiplying encodings of zero with zero-testing parameters properly in the CLT scheme, one can obtain a required input of our algorithm: products of CRT-ACD instances and auxiliary input. This leads to a total break: all the quantities that were supposed to be kept secret can be recovered in an efficient and public manner. We also introduce polynomial-time algorithms for the Subgroup Membership, Decision Linear, and Graded External Diffie-Hellman problems, which are used as the base problems of several cryptographic schemes constructed on multilinear maps.",
+      "abstract_citation": "https://eprint.iacr.org/2014/906.pdf",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2014/906.pdf"
+    },
+    {
+      "title": "Signature-based Witness Encryption with Compact Ciphertext",
+      "title_citation": "https://eprint.iacr.org/2024/1477",
+      "authors": [
+        {
+          "value": "Gennaro Avitabile",
+          "value_citation": "https://eprint.iacr.org/2024/1477"
+        },
+        {
+          "value": "Nico Döttling",
+          "value_citation": "https://eprint.iacr.org/2024/1477"
+        },
+        {
+          "value": "Bernardo Magri",
+          "value_citation": "https://eprint.iacr.org/2024/1477"
+        },
+        {
+          "value": "Christos Sakkas",
+          "value_citation": "https://eprint.iacr.org/2024/1477"
+        },
+        {
+          "value": "Stella Wohnig",
+          "value_citation": "https://eprint.iacr.org/2024/1477"
+        }
+      ],
+      "abstract": "Signature-based witness encryption (SWE) is a recently proposed notion that allows to encrypt a message with respect to a tag and a set of signature verification keys. The resulting ciphertext can only be decrypted by a party who holds at least different valid signatures w.r.t. and different verification keys out of the keys specified at encryption time. Natural applications of this primitive involve distributed settings (e.g., blockchains), where multiple parties sign predictable messages, such as polling or randomness beacons. However, known SWE schemes without trusted setup have ciphertexts that scale linearly in the number of verification keys. This quickly becomes a major bottleneck as the system gets more distributed and the number of parties increases. Towards showing the feasibility of SWE with ciphertext size sub-linear in the number of keys, we give a construction based on indistinguishability obfuscation (iO) for Turing machines and strongly puncturable signatures (SPS).",
+      "abstract_citation": "https://eprint.iacr.org/2024/1477",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2024/1477"
+    },
+    {
+      "title": "Adaptively Secure Attribute-Based Encryption from Witness Encryption",
+      "title_citation": "https://eprint.iacr.org/2024/1486",
+      "authors": [
+        {
+          "value": "Brent Waters",
+          "value_citation": "https://eprint.iacr.org/2024/1486"
+        },
+        {
+          "value": "Daniel Wichs",
+          "value_citation": "https://eprint.iacr.org/2024/1486"
+        }
+      ],
+      "abstract": "Attribute-based encryption (ABE) enables fine-grained control over which ciphertexts various users can decrypt. A master authority can create secret keys with different functions (circuits) for different users. Anybody can encrypt a message under some attribute so that only recipients with a key for a function such that will be able to decrypt. There are a number of different approaches toward achieving selectively secure ABE, where the adversary has to decide on the challenge attribute ahead of time before seeing any keys, including constructions via bilinear maps (for NC1 circuits), learning with errors, or witness encryption. However, when it comes adaptively secure ABE, the problem seems to be much more challenging and we only know of two potential approaches: via the ``dual systems'' methodology from bilinear maps, or via indistinguishability obfuscation. In this work, we give a new approach that constructs adaptively secure ABE from witness encryption (along with statistically sound NIZKs and one-way functions). While witness encryption is a strong assumption, it appears to be fundamentally weaker than indistinguishability obfuscation. Moreover, we have candidate constructions of witness encryption from some assumptions (e.g., evasive LWE) from which we do not know how to construct indistinguishability obfuscation, giving us adaptive ABE from these assumptions as a corollary of our work.",
+      "abstract_citation": "https://eprint.iacr.org/2024/1486",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2024/1486"
+    },
+    {
+      "title": "New multilinear maps from ideal lattices",
+      "title_citation": "https://eprint.iacr.org/2015/737",
+      "authors": [
+        {
+          "value": "Gu Chunsheng",
+          "value_citation": "https://eprint.iacr.org/2015/737"
+        }
+      ],
+      "abstract": "Recently, Hu and Jia presented an efficient attack on the GGH13 map. They show that the MPKE and WE based on GGH13 with public tools of encoding are not secure. Currently, an open problem is to fix GGH13 with functionality-preserving. By modifying zero-testing parameter and using switching modulus method, we present a new construction of multilinear map from ideal lattices. Our construction maintains functionality of GGH13 with public tools of encoding, such as applications of GGH13-based MPKE and WE. The security of our construction depends upon new hardness assumption.",
+      "abstract_citation": "https://eprint.iacr.org/2015/737",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2015/737"
+    },
+    {
+      "title": "Witness Encryption for Succinct Functional Commitments and Applications",
+      "title_citation": "https://eprint.iacr.org/2022/1510",
+      "authors": [
+        {
+          "value": "Matteo Campanelli",
+          "value_citation": "https://eprint.iacr.org/2022/1510"
+        },
+        {
+          "value": "Dario Fiore",
+          "value_citation": "https://eprint.iacr.org/2022/1510"
+        },
+        {
+          "value": "Hamidreza Khoshakhlagh",
+          "value_citation": "https://eprint.iacr.org/2022/1510"
+        }
+      ],
+      "abstract": "Witness encryption (WE), introduced by Garg, Gentry, Sahai, and Waters (STOC 2013) allows one to encrypt a message to a statement x for some NP language L, such that any user holding a witness for x∈L can decrypt the ciphertext. The extreme power of this primitive comes at the cost of its elusiveness: a practical construction from established cryptographic assumptions is currently out of reach. In this work, we investigate a new notion of encryption that has a flavor of WE and that we can build only based on bilinear pairings, for interesting classes of computation. We do this by connecting witness encryption to functional commitments (FC). FCs are an advanced notion of commitments that allows fine-grained openings, that is non-interactive proofs to show that a commitment cm opens to v such that y=G(v), with the crucial feature that both commitments and openings are succinct. Our new WE notion, witness encryption for (succinct) functional commitment (WE-FC), allows one to encrypt a message with respect to a triple (cm,G,y), and decryption is unlocked using an FC opening that cm opens to v such that y=G(v). This mechanism is similar to the notion of witness encryption for NIZK of commitments [Benhamouda and Lin, TCC'20], with the crucial difference that ours supports commitments and decryption time whose size and complexity do not depend on the length of the committed data v. Our main contributions are therefore the formal definition of WE-FC, a generic methodology to compile an FC in bilinear groups into an associated WE-FC scheme (semantically secure in the generic group model), and a new FC construction for NC1 circuits that yields a WE-FC for the same class of functions. Similarly to [Benhamouda and Lin, TCC'20], we show how to apply WE-FC to construct multiparty reusable non-interactive secure computation (mrNISC) protocols. Crucially, the efficiency profile of WE-FC yields mrNISC protocols whose offline stage has shorter communication (only a succinct commitment from each party). As an additional contribution, we discuss further applications of WE-FC and show how to extend this primitive to better suit these settings.",
+      "abstract_citation": "https://eprint.iacr.org/2022/1510",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2022/1510"
+    },
+    {
+      "title": "Functional Encryption: Deterministic to Randomized Functions from Simple Assumptions",
+      "title_citation": "https://eprint.iacr.org/2016/482",
+      "authors": [
+        {
+          "value": "Shashank Agrawal",
+          "value_citation": "https://eprint.iacr.org/2016/482"
+        },
+        {
+          "value": "David J. Wu",
+          "value_citation": "https://eprint.iacr.org/2016/482"
+        }
+      ],
+      "abstract": "Functional encryption (FE) enables fine-grained control of sensitive data by allowing users to only compute certain functions for which they have a key. The vast majority of work in FE has focused on deterministic functions, but for several applications such as privacy-aware auditing, differentially-private data release, proxy re-encryption, and more, the functionality of interest is more naturally captured by a randomized function. Recently, Goyal et al. (TCC 2015) initiated a formal study of FE for randomized functionalities with security against malicious encrypters, and gave a selectively secure construction from indistinguishability obfuscation. To date, this is the only construction of FE for randomized functionalities in the public-key setting. This stands in stark contrast to FE for deterministic functions which has been realized from a variety of assumptions. Our key contribution in this work is a generic transformation that converts any general-purpose, public-key FE scheme for deterministic functionalities into one that supports randomized functionalities. Our transformation uses the underlying FE scheme in a black-box way and can be instantiated using very standard number-theoretic assumptions (for instance, the DDH and RSA assumptions suffice). When applied to existing FE constructions, we obtain several adaptively-secure, public-key functional encryption schemes for randomized functionalities with security against malicious encrypters from many different assumptions such as concrete assumptions on multilinear maps, indistinguishability obfuscation, and in the bounded-collusion setting, the existence of public-key encryption, together with standard number-theoretic assumptions. Additionally, we introduce a new, stronger definition for malicious security as the existing one falls short of capturing an important class of correlation attacks. In realizing this definition, our compiler combines ideas from disparate domains like related-key security for pseudorandom functions and deterministic encryption in a novel way. We believe that our techniques could be useful in expanding the scope of new variants of functional encryption (e.g., multi-input, hierarchical, and others) to support randomized functionalities.",
+      "abstract_citation": "https://eprint.iacr.org/2016/482",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2016/482"
+    },
+    {
+      "title": "Functional Encryption: Decentralised and Delegatable",
+      "title_citation": "https://eprint.iacr.org/2015/1017",
+      "authors": [
+        {
+          "value": "Nishanth Chandran",
+          "value_citation": "https://eprint.iacr.org/2015/1017"
+        },
+        {
+          "value": "Vipul Goyal",
+          "value_citation": "https://eprint.iacr.org/2015/1017"
+        },
+        {
+          "value": "Aayush Jain",
+          "value_citation": "https://eprint.iacr.org/2015/1017"
+        },
+        {
+          "value": "Amit Sahai",
+          "value_citation": "https://eprint.iacr.org/2015/1017"
+        }
+      ],
+      "abstract": "Functional Encryption (FE) allows an authority to provide users with keys corresponding to various functions, such that a user with a secret key corresponding to a function f, can compute f(m) from a cipher-text that encrypts m. While FE is a very powerful primitive, a key downside is the requirement of a central point of trust. In this work, we address this issue of trust in two ways: First, we introduce Multi-Authority Functional Encryption (MAFE) as a generalization of both Functional Encryption and Multi-Authority Attribute-Based Encryption (MABE), allowing for multiple authorities. Second, we consider delegatable functional encryption where any user may independently act as a key generation authority by deriving a decryption key for a policy more restrictive than its own. We construct FE where a decryption key for a function is simply a signature on the function, enabling multiple authorities and delegation.",
+      "abstract_citation": "https://eprint.iacr.org/2015/1017",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2015/1017"
+    },
+    {
+      "title": "How to Use (Plain) Witness Encryption: Registered ABE, Flexible Broadcast, and More",
+      "title_citation": "https://eprint.iacr.org/2023/812",
+      "authors": [
+        {
+          "value": "Cody Freitag",
+          "value_citation": "https://eprint.iacr.org/2023/812"
+        },
+        {
+          "value": "Brent Waters",
+          "value_citation": "https://eprint.iacr.org/2023/812"
+        },
+        {
+          "value": "David J. Wu",
+          "value_citation": "https://eprint.iacr.org/2023/812"
+        }
+      ],
+      "abstract": "Witness encryption is a generalization of public-key encryption where the public key can be any NP statement x and the associated decryption key is any witness w for x. While early constructions of witness encryption relied on multilinear maps and indistinguishability obfuscation (iO), recent works have provided direct constructions of witness encryption that are more efficient than iO (and also seem unlikely to yield iO). Motivated by this progress, we revisit the possibility of using witness encryption to realize advanced cryptographic primitives previously known only in \"obfustopia.\" In this work, we give new constructions of trustless encryption systems from plain witness encryption (in conjunction with the learning-with-errors assumption): (1) flexible broadcast encryption (a broadcast encryption scheme where users choose their own secret keys and users can encrypt to an arbitrary set of public keys); and (2) registered attribute-based encryption (a system where users choose their own keys and then register their public key together with a set of attributes with a deterministic and transparent key curator). Both primitives were previously only known from iO. We also show how to use our techniques to obtain an optimal broadcast encryption scheme in the random oracle model. Underlying our constructions is a novel technique for using witness encryption based on a new primitive which we call function-binding hash functions. Whereas a somewhere statistically binding hash function statistically binds a digest to a few bits of the input, a function-binding hash function statistically binds a digest to the output of a function of the inputs. As we demonstrate in this work, function-binding hash functions provide us new ways to leverage the power of plain witness encryption and use it as the foundation of advanced cryptographic primitives. Finally, we show how to build function-binding hash functions for the class of disjunctions of block functions from leveled homomorphic encryption; this in combination with witness encryption yields our main results.",
+      "abstract_citation": "https://eprint.iacr.org/2023/812",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2023/812"
+    },
+    {
+      "title": "When does Functional Encryption Imply Obfuscation?",
+      "title_citation": "https://eprint.iacr.org/2017/943.pdf",
+      "authors": [
+        {
+          "value": "Sanjam Garg",
+          "value_citation": "https://eprint.iacr.org/2017/943.pdf"
+        },
+        {
+          "value": "Mohammad Mahmoody",
+          "value_citation": "https://eprint.iacr.org/2017/943.pdf"
+        },
+        {
+          "value": "Ameer Mohammed",
+          "value_citation": "https://eprint.iacr.org/2017/943.pdf"
+        }
+      ],
+      "abstract": "Realizing indistinguishablility obfuscation (IO) based on well-understood computational assumptions is an important open problem. Recently, realizing functional encryption (FE) has emerged as promising directing towards that goal. In this work, we study when FE can be used for obtaining IO. We show any single-key FE for function families with “short” enough outputs is insufficient for IO even when non-black-box use of the underlying FE is allowed to some degree. Complementing our negative result, we show that our condition of “short” enough is almost tight. More specifically, we show that any compact single-key FE with functional secret-key output length strictly larger than ciphertext length is sufficient for IO. Furthermore, we show that non-black-box use of the underlying FE is necessary for such a construction, by ruling out any fully black-box construction of IO from FE even with arbitrary long output.",
+      "abstract_citation": "https://eprint.iacr.org/2017/943.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2017/943.pdf"
+    },
+    {
+      "title": "Multilinear maps via secret ring",
+      "title_citation": "https://eprint.iacr.org/2018/312",
+      "authors": [
+        {
+          "value": "Chunsheng Gu",
+          "value_citation": "https://eprint.iacr.org/2018/312"
+        }
+      ],
+      "abstract": "Garg, Gentry and Halevi (GGH13) described the first candidate multilinear maps using ideal lattices. However, Hu and Jia recently presented an efficient attack on the GGH13 map, which breaks the multipartite key exchange (MPKE) and witness encryption (WE) based on GGH13. In this work, we describe a new variant of GGH13 using secret ring, which preserves the origin functionality of GGH13. The security of our variant depends upon the following new hardness problem. Given the determinant of the circular matrix of some element in a secret ring, the problem is to find this secret ring and reconstruct this element.",
+      "abstract_citation": "https://eprint.iacr.org/2018/312",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2018/312"
+    },
+    {
+      "title": "Witness Encryption from Instance Independent Assumptions",
+      "title_citation": "https://eprint.iacr.org/2014/273",
+      "authors": [
+        {
+          "value": "Craig Gentry",
+          "value_citation": "https://eprint.iacr.org/2014/273"
+        },
+        {
+          "value": "Allison Bishop Lewko",
+          "value_citation": "https://eprint.iacr.org/2014/273"
+        },
+        {
+          "value": "Brent Waters",
+          "value_citation": "https://eprint.iacr.org/2014/273"
+        }
+      ],
+      "abstract": "Witness encryption was proposed by Garg, Gentry, Sahai, and Waters as a means to encrypt to an instance, x, of an NP language and produce a ciphertext. In such a system, any decryptor that knows of a witness w that x is in the language can decrypt the ciphertext and learn the message. In addition to proposing the concept, their work provided a candidate for a witness encryption scheme built using multilinear encodings. However, one significant limitation of the work is that the candidate had no proof of security (other than essentially assuming the scheme secure). In this work we provide a proof framework for proving witness encryption schemes secure under instance independent assumptions. At the highest level we introduce the abstraction of positional witness encryption which allows a proof reduction of a witness encryption scheme via a sequence of 2^n hybrid experiments where n is the witness length of the NP-statement. Each hybrid step proceeds by looking at a single witness candidate and using the fact that it does not satisfy the NP-relation to move the proof forward. We show that this isolation strategy enables one to create a witness encryption system that is provably secure from assumptions that are (maximally) independent of any particular encryption instance. We demonstrate the viability of our approach by implementing this strategy using level n-linear encodings where n is the witness length. Our complexity assumption has approximately n group elements, but does not otherwise depend on the NP-instance x.",
+      "abstract_citation": "https://eprint.iacr.org/2014/273",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2014/273"
+    },
+    {
+      "title": "Extractable Witness Encryption for KZG Commitments and Efficient Laconic OT",
+      "title_citation": "https://eprint.iacr.org/2024/264",
+      "authors": [
+        {
+          "value": "Nils Fleischhacker",
+          "value_citation": "https://eprint.iacr.org/2024/264"
+        },
+        {
+          "value": "Mathias Hall-Andersen",
+          "value_citation": "https://eprint.iacr.org/2024/264"
+        },
+        {
+          "value": "Mark Simkin",
+          "value_citation": "https://eprint.iacr.org/2024/264"
+        }
+      ],
+      "abstract": "We present a concretely efficient and simple extractable witness encryption scheme for KZG polynomial commitments. It allows to encrypt a message towards a triple (C, x, y), where C is a KZG commitment for some polynomial P. Anyone with an opening for the commitment attesting P(x) = y can decrypt, but without knowledge of a valid opening the message is computationally hidden. Our construction is simple and highly efficient. The ciphertext is only a single group element. Encryption and decryption both require a single pairing evaluation and a constant number of group operations. Using our witness encryption scheme, we construct a simple and highly efficient laconic OT protocol, which significantly outperforms the state of the art in most important metrics.",
+      "abstract_citation": "https://eprint.iacr.org/2024/264",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2024/264"
+    },
+    {
+      "title": "Cryptanalysis of the New CLT Multilinear Maps",
+      "title_citation": "https://eprint.iacr.org/2015/934",
+      "authors": [
+        {
+          "value": "Jung Hee Cheon",
+          "value_citation": "https://eprint.iacr.org/2015/934"
+        },
+        {
+          "value": "Changmin Lee",
+          "value_citation": "https://eprint.iacr.org/2015/934"
+        },
+        {
+          "value": "Hansol Ryu",
+          "value_citation": "https://eprint.iacr.org/2015/934"
+        }
+      ],
+      "abstract": "Multilinear maps have many cryptographic applications. The first candidate construction of multilinear maps was proposed by Garg, Gentry, and Halevi (GGH13) in 2013, and soon afterwards, another candidate was suggested by Coron, Lepoint, and Tibouchi (CLT13) that works over the integers. However, both of these were found to be insecure in the face of a so-called zeroizing attack (HJ15, CHL+15). To improve on CLT13, Coron, Lepoint, and Tibouchi proposed another candidate of new multilinear maps over the integers (CLT15). In this paper, we describe an attack against CLT15. Our attack shares the essence of the cryptanalysis of CLT13 and exploits low level encodings of zero, as well as other public parameters. As in CHL+15, this leads to finding all the secret parameters of \\kappa-multilinear maps in polynomial time of the security parameter.",
+      "abstract_citation": "https://eprint.iacr.org/2015/934",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2015/934"
+    },
+    {
+      "title": "On Succinct Arguments and Witness Encryption from Groups",
+      "title_citation": "https://eprint.iacr.org/2020/1319",
+      "authors": [
+        {
+          "value": "Ohad Barta",
+          "value_citation": "https://eprint.iacr.org/2020/1319"
+        },
+        {
+          "value": "Yuval Ishai",
+          "value_citation": "https://eprint.iacr.org/2020/1319"
+        },
+        {
+          "value": "Rafail Ostrovsky",
+          "value_citation": "https://eprint.iacr.org/2020/1319"
+        },
+        {
+          "value": "David J. Wu",
+          "value_citation": "https://eprint.iacr.org/2020/1319"
+        }
+      ],
+      "abstract": "Succinct non-interactive arguments (SNARGs) enable proofs of NP statements with very low communication. Recently, there has been significant work in both theory and practice on constructing SNARGs with very short proofs. Currently, the state-of-the-art in succinctness is due to Groth (Eurocrypt 2016) who constructed a SNARG from bilinear maps where the proof consists of just 3 group elements. In this work, we first construct a concretely-efficient designated-verifier (preprocessing) SNARG with inverse polynomial soundness, where the proof consists of just 2 group elements in a standard (generic) group. This leads to a 50% reduction in concrete proof size compared to Groth's construction. We follow the approach of Bitansky et al. (TCC 2013) who describe a compiler from linear PCPs to SNARGs in the preprocessing model. Our improvement is based on a new linear PCP packing technique that allows us to construct 1-query linear PCPs which can then be compiled into a SNARG (using ElGamal encryption over a generic group). An appealing feature of our new SNARG is that the verifier can precompute a statement-independent lookup table in an offline phase; verifying proofs then only requires 2 exponentiations and a single table lookup. This makes our new designated-verifier SNARG appealing in settings that demand fast verification and minimal communication. We then turn to the question of constructing arguments where the proof consists of a single group element. Here, we first show that any (possibly interactive) argument for a language L where the verification algorithm is \"generic\" (i.e., only performs generic group operations) and the proof consists of a single group element, implies a witness encryption scheme for L. We then show that under a yet-unproven, but highly plausible, hypothesis on the hardness of approximating the minimal distance of linear codes, we can construct a 2-message laconic argument for NP where the proof consists of a single group element. Under the same hypothesis, we obtain a witness encryption scheme for NP in the generic group model. Along the way, we show that under a conceptually-similar but proven hardness of approximation result, there is a 2-message laconic argument for NP with negligible soundness error where the prover's message consists of just 2 group elements. In both settings, we obtain laconic arguments (and linear PCPs) with linear decision procedures. Our constructions circumvent a previous lower bound by Groth on such argument systems with linear decision procedures by relying on imperfect completeness. Namely, our constructions have vanishing but not negligible completeness error, while the lower bound of Groth implicitly assumes negligible completeness error of the underlying argument. Our techniques thus highlight new avenues for designing linear PCPs, succinct arguments, and witness encryption schemes.",
+      "abstract_citation": "https://eprint.iacr.org/2020/1319",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2020/1319"
+    },
+    {
+      "title": "Multilinear Maps Using Ideal Lattices without Encodings of Zero",
+      "title_citation": "https://eprint.iacr.org/2015/023",
+      "authors": [
+        {
+          "value": "Gu Chunsheng",
+          "value_citation": "https://eprint.iacr.org/2015/023"
+        }
+      ],
+      "abstract": "Garg, Gentry and Halevi (GGH) described the first candidate multilinear maps using ideal lattices. However, Hu and Jia recently presented an efficient attack for two applications based on the GGH map, multipartite Diffie-Hellman key exchange and an instance of witness encryption using 3-exact cover problem. In this paper, we describe a modification construction of multilinear maps from ideal lattices without encodings of zero by introducing random matrices to avoid the zeroing attack problem. The security of our construction depends upon new hardness assumption, which is seemingly closely related to hardness problems of lattices. Furthermore, we present multipartite Diffie-Hellman key exchange protocol using our construction, and an instance of witness encryption using 3-exact cover problem based on a variant of our construction.",
+      "abstract_citation": "https://eprint.iacr.org/2015/023",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2015/023"
+    },
+    {
+      "title": "Inner-Product Functional Encryption with Fine-Grained Access Control",
+      "title_citation": "https://eprint.iacr.org/2020/577",
+      "authors": [
+        {
+          "value": "Michel Abdalla",
+          "value_citation": "https://eprint.iacr.org/2020/577"
+        },
+        {
+          "value": "Dario Catalano",
+          "value_citation": "https://eprint.iacr.org/2020/577"
+        },
+        {
+          "value": "Romain Gay",
+          "value_citation": "https://eprint.iacr.org/2020/577"
+        },
+        {
+          "value": "Bogdan Ursu",
+          "value_citation": "https://eprint.iacr.org/2020/577"
+        }
+      ],
+      "abstract": "We construct new functional encryption schemes that combine the access control functionality of attribute-based encryption with the possibility of performing linear operations on the encrypted data. While such a primitive could be easily realized from fully fledged functional encryption schemes, what makes our result interesting is the fact that our schemes simultaneously achieve all the following properties. They are public-key, efficient and can be proved secure under standard and well established assumptions (such as LWE or pairings). Furthermore, security is guaranteed in the setting where adversaries are allowed to get functional keys that decrypt the challenge ciphertext. Our first results are two functional encryption schemes for the family of functions that allow users to embed policies (expressed by monotone span programs) in the encrypted data, so that one can generate functional keys to compute weighted sums on the latter. Both schemes are pairing-based and quite generic: they combine the ALS functional encryption scheme for inner products from Crypto 2016 with any attribute-based encryption schemes relying on the dual-system encryption methodology. As an additional bonus, they yield simple and elegant multi-input extensions essentially for free, thereby broadening the set of applications for such schemes. Multi-input is a particularly desirable feature in our setting, since it gives a finer access control over the encrypted data, by allowing users to associate different access policies to different parts of the encrypted data. Our second result builds identity-based functional encryption for inner products from lattices. This is achieved by carefully combining existing IBE schemes from lattices with adapted, LWE-based, variants of ALS. We point out to intrinsic technical bottlenecks to obtain richer forms of access control from lattices. From a conceptual point of view, all our results can be seen as further evidence that more expressive forms of functional encryption can be realized under standard assumptions and with little computational overhead.",
+      "abstract_citation": "https://eprint.iacr.org/2020/577",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2020/577"
+    },
+    {
+      "title": "Exploding Obfuscation: A Framework for Building Applications of Obfuscation From Polynomial Hardness",
+      "title_citation": "https://eprint.iacr.org/2017/209.pdf",
+      "authors": [
+        {
+          "value": "Qipeng Liu",
+          "value_citation": "https://eprint.iacr.org/2017/209.pdf"
+        },
+        {
+          "value": "Mark Zhandry",
+          "value_citation": "https://eprint.iacr.org/2017/209.pdf"
+        }
+      ],
+      "abstract": "The paper introduces Exploding Indistinguishability Obfuscation (eiO), a weakened notion of obfuscation that unifies results for building cryptographic applications from polynomial hardness rather than the sub-exponential assumptions typically required for standard indistinguishability obfuscation (iO). The authors show how to build eiO from functional encryption (FE) and demonstrate its utility by deriving several applications—including Nash equilibrium hardness, trapdoor permutations, universal samplers, short signatures, and multi-key FE—from the polynomial hardness of FE. The framework simplifies previous complex constructions and provides a more efficient reduction between FE and iO.",
+      "abstract_citation": "https://eprint.iacr.org/2017/209.pdf",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2017/209.pdf"
+    },
+    {
+      "title": "Multilinear Map via Scale-Invariant FHE: Enhancing Security and Efficiency",
+      "title_citation": "https://eprint.iacr.org/2015/992",
+      "authors": [
+        {
+          "value": "Jinsu Kim",
+          "value_citation": "https://eprint.iacr.org/2015/992"
+        },
+        {
+          "value": "Sungwook Kim",
+          "value_citation": "https://eprint.iacr.org/2015/992"
+        },
+        {
+          "value": "Jae Hong Seo",
+          "value_citation": "https://eprint.iacr.org/2015/992"
+        }
+      ],
+      "abstract": "Cryptographic multilinear map is a useful tool for constructing numerous secure protocols and Graded Encoding System (GES) is an approximate concept of multilinear map. In multilinear map context, there are several important issues, mainly about security and efficiency. All early stage candidate multilinear maps are recently broken by so-called zeroizing attack, so that it is highly required to develop reliable mechanisms to prevent zeroizing attacks. Moreover, the encoding size in all candidate multilinear maps grows quadratically in terms of multilinearity parameter ̴̵̶̷̸̡̢̧̨̛̖̗̘̙̜̝̞̟̠̣̤̥̦̩̪̫̬̭̮̯̰̱̲̳̹̺̻̼͇͈͉͍͎́̀̂̃̄̅̆̇̈̉̊̋̌̍̎̏̐̑̒̓̔̽̾̿̀́͂̓̈́͆͊͋͌̕̚ͅ͏͓͔͕͖͙͚͐͑͒͗͛ͣͤͥͦͧͨͩͪͫͬͭͮͯ͘͜͟͢͝͞͠͡ͰͱͲͳʹ͵Ͷͷ͸͹ͺͻͼͽ;Ϳ΀΁΂΃΄΅Ά·ΈΉΊ΋Ό΍ΎΏΐΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡ΢ΣΤΥΦΧΨΩΪΫάέήίΰαβγδεζηθικλμνξοπρςστυφχψωϊϋόύώϏϐϑϒϓϔϕϖϗϘϙϚϛϜϝϞϟϠϡϢϣϤϥϦϧϨϩϪϫϬϭϮϯϰϱϲϳϴϵ϶ϷϸϹϺϻϼϽϾϿκ and it makes them less attractive for applications requiring large κ. In this paper, we propose a new integer-based multilinear map that has several advantages over previous schemes. In terms of security, we expect that our construction is resistant to the zeroizing attack. In terms of efficiency, the bit-size of an encoding grows sublinearly with κ, more precisely O((log2 κ)2). To this end, we essentially utilize a technique of the multiplication procedure in scale-invariant fully homomorphic encryption (FHE), which enables to achieve sublinear complexity in terms of multilinearity and at the same time security against the zeroizing attacks. We first devise a new approach for approximate multilinear maps, called Ring Encoding System (RES), and prove that a multilinear map built via RES is generically secure. Next, we propose a new efficient scale-invariant FHE with special properties, and then construct a candidate RES based on a newly proposed scale-invariant FHE.",
+      "abstract_citation": "https://eprint.iacr.org/2015/992",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2015/992"
+    },
+    {
+      "title": "Multilinear Maps Using a Variant of Ring-LWE",
+      "title_citation": "https://eprint.iacr.org/2017/342",
+      "authors": [
+        {
+          "value": "Gu Chunsheng",
+          "value_citation": "https://eprint.iacr.org/2017/342"
+        }
+      ],
+      "abstract": "GGH13, CLT13 and GGH15 of multilinear maps suffer from zeroizing attacks. In this paper, we present a new construction of multilinear maps using a variant of ring-LWE (vRLWE). Furthermore, we also present two new variants of vRLWE, which respectively support the applications of multipartite key exchange and witness encryption. At the same time, we also present a new variant of GGH13 using matrix form. The security of our construction depends upon new hardness assumptions.",
+      "abstract_citation": "https://eprint.iacr.org/2017/342",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2017/342"
+    },
+    {
+      "title": "Adaptive Witness Encryption and Asymmetric Password-based Cryptography",
+      "title_citation": "https://eprint.iacr.org/2013/704",
+      "authors": [
+        {
+          "value": "Mihir Bellare",
+          "value_citation": "https://eprint.iacr.org/2013/704"
+        },
+        {
+          "value": "Viet Tung Hoang",
+          "value_citation": "https://eprint.iacr.org/2013/704"
+        }
+      ],
+      "abstract": "We show by counter-example that the soundness security requirement for witness encryption given by Garg, Gentry, Sahai and Waters (STOC 2013) does not suffice for the security of their own applications. We introduce adaptively-sound (AS) witness encryption to fill the gap. We then introduce asymmetric password-based encryption (A-PBE). This offers gains over classical, symmetric password-based encryption in the face of attacks that compromise servers to recover hashed passwords. We distinguish between invasive A-PBE schemes (they introduce new password-based key-derivation functions) and non-invasive ones (they can use existing, deployed password-based key-derivation functions). We give simple and efficient invasive A-PBE schemes and use AS-secure witness encryption to give non-invasive A-PBE schemes.",
+      "abstract_citation": "https://eprint.iacr.org/2013/704",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2013/704"
+    },
+    {
+      "title": "Obfuscation of Unitary Quantum Programs",
+      "title_citation": "https://eprint.iacr.org/2025/891",
+      "authors": [
+        {
+          "value": "Mi-Ying (Miryam) Huang",
+          "value_citation": "https://eprint.iacr.org/2025/891"
+        },
+        {
+          "value": "Er-Cheng Tang",
+          "value_citation": "https://eprint.iacr.org/2025/891"
+        }
+      ],
+      "abstract": "Program obfuscation aims to hide the inner workings of a program while preserving its functionality. In the quantum setting, recent works have obtained obfuscation schemes for specialized classes of quantum circuits. For instance, Bartusek, Brakerski, and Vaikuntanathan (STOC 2024) constructed a quantum state obfuscation scheme, which supports the obfuscation of quantum programs represented as quantum states for pseudo-deterministic quantum programs with classical inputs and outputs in the classical oracle model. In this work, we improve upon existing results by constructing the first quantum state obfuscation scheme for unitary (or approximately unitary) quantum programs supporting quantum inputs and outputs in the classical oracle model. At the core of our obfuscation scheme are two novel ingredients: a functional quantum authentication scheme that allows key holders to learn specific functions of the authenticated quantum state with simulation-based security, and a compiler that represents an arbitrary quantum circuit as a projective linear-plus-measurement quantum program described by a sequence of non-adaptive Clifford gates interleaved with adaptive and compatible measurements.",
+      "abstract_citation": "https://eprint.iacr.org/2025/891",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2025/891"
+    },
+    {
+      "title": "OBSCURE: Versatile Software Obfuscation from a Lightweight Secure Element",
+      "title_citation": "https://eprint.iacr.org/2024/077",
+      "authors": [
+        {
+          "value": "Darius Mercadier",
+          "value_citation": "https://eprint.iacr.org/2024/077"
+        },
+        {
+          "value": "Viet Sang Nguyen",
+          "value_citation": "https://eprint.iacr.org/2024/077"
+        },
+        {
+          "value": "Matthieu Rivain",
+          "value_citation": "https://eprint.iacr.org/2024/077"
+        },
+        {
+          "value": "Aleksei Udovenko",
+          "value_citation": "https://eprint.iacr.org/2024/077"
+        }
+      ],
+      "abstract": "Software obfuscation is a powerful tool to protect the intellectual property or secret keys inside programs. Strong software obfuscation is crucial in the context of untrusted execution environments (e.g., subject to malware infection) or to face potentially malicious users trying to reverse-engineer a sensitive program. Unfortunately, the state-of-the-art of pure software-based obfuscation (including white-box cryptography) is either insecure or infeasible in practice. This work introduces OBSCURE, a versatile framework for practical and cryptographically strong software obfuscation relying on a simple stateless secure element (to be embedded, for example, in a protected hardware chip or a token). Based on the foundational result by Goyal et al. from TCC 2010, our scheme enjoys provable security guarantees, and further focuses on practical aspects, such as efficient execution of the obfuscated programs, while maintaining simplicity of the secure element. In particular, we propose a new rectangular universalization technique, which is also of independent interest. We provide an implementation of OBSCURE taking as input a program source code written in a subset of the C programming language. This ensures usability and a broad range of applications of our framework. We benchmark the obfuscation on simple software programs as well as on cryptographic primitives, hence highlighting the possible use cases of the framework as an alternative to pure software-based white-box implementations.",
+      "abstract_citation": "https://eprint.iacr.org/2024/077",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2024/077"
+    },
+    {
+      "title": "COA-Secure Obfuscation and Applications",
+      "title_citation": "https://eprint.iacr.org/2022/1781",
+      "authors": [
+        {
+          "value": "Ran Canetti",
+          "value_citation": "https://eprint.iacr.org/2022/1781"
+        },
+        {
+          "value": "Suvradip Chakraborty",
+          "value_citation": "https://eprint.iacr.org/2022/1781"
+        },
+        {
+          "value": "Dakshita Khurana",
+          "value_citation": "https://eprint.iacr.org/2022/1781"
+        },
+        {
+          "value": "Nishanth Kumar",
+          "value_citation": "https://eprint.iacr.org/2022/1781"
+        },
+        {
+          "value": "Oxana Poburinnaya",
+          "value_citation": "https://eprint.iacr.org/2022/1781"
+        },
+        {
+          "value": "Manoj Prabhakaran",
+          "value_citation": "https://eprint.iacr.org/2022/1781"
+        }
+      ],
+      "abstract": "We put forth a new paradigm for program obfuscation, where obfuscated programs are endowed with proofs of ''well-formedness.'' In addition to asserting existence of an underlying plaintext program with an attested structure and functionality, these proofs also prevent mauling attacks, whereby an adversary surreptitiously creates an obfuscated program based on secrets which are embedded in a given obfuscated program. We call this new guarantee Chosen Obfuscation Attack (COA) security. We define and construct general-purpose COA-secure Probabilistic Indistinguishability Obfuscators for circuits, assuming sub-exponential IO for circuits and CCA commitments. To demonstrate the power of the new notion, we use it to realize, in the plain model: - Structural Watermarking, which is a new form of software watermarking that provides significantly broader protection than current schemes and features a keyless, public verification process. - Completely CCA encryption, which is a strengthening of completely non-malleable encryption. We also show, based on the same assumptions, a generic method for enhancing any obfuscation mechanism that guarantees any semantic-style form of hiding to one that provides also COA security.",
+      "abstract_citation": "https://eprint.iacr.org/2022/1781",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2022/1781"
+    },
+    {
+      "title": "Quantum State Obfuscation from Classical Oracles",
+      "title_citation": "https://eprint.iacr.org/2024/082",
+      "authors": [
+        {
+          "value": "James Bartusek",
+          "value_citation": "https://eprint.iacr.org/2024/082"
+        },
+        {
+          "value": "Zvika Brakerski",
+          "value_citation": "https://eprint.iacr.org/2024/082"
+        },
+        {
+          "value": "Vinod Vaikuntanathan",
+          "value_citation": "https://eprint.iacr.org/2024/082"
+        }
+      ],
+      "abstract": "A major unresolved question in quantum cryptography is whether it is possible to obfuscate arbitrary quantum computation. In this work, we develop a new array of techniques that we use to construct a quantum state obfuscator, a powerful notion formalized recently by Coladangelo and Gunn (arXiv:2311.07794). Quantum state obfuscation refers to the task of compiling a quantum program, consisting of a quantum circuit C with a classical description and an auxiliary quantum state |ψ⟩, into a functionally-equivalent obfuscated quantum program that hides as much as possible about C and |ψ⟩. We prove the security of our obfuscator when applied to any pseudo-deterministic quantum program, i.e. one that computes a (nearly) deterministic classical input / classical output functionality. Our security proof is with respect to an efficient classical oracle, which may be heuristically instantiated using quantum-secure indistinguishability obfuscation for classical circuits. Our results improve upon previous work and provide the first candidate realization of a \"best-possible\" copy-protection scheme for all polynomial-time functionalities. Our techniques include a publicly-verifiable, linearly-homomorphic quantum authentication scheme and a method for compiling any quantum circuit into a \"linear + measurement\" quantum program.",
+      "abstract_citation": "https://eprint.iacr.org/2024/082",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2024/082"
+    },
+    {
+      "title": "Lattice-based Obfuscation from NTRU and Equivocal LWE",
+      "title_citation": "https://eprint.iacr.org/2025/1129",
+      "authors": [
+        {
+          "value": "Valerio Cini",
+          "value_citation": "https://eprint.iacr.org/2025/1129"
+        },
+        {
+          "value": "Russell W. F. Lai",
+          "value_citation": "https://eprint.iacr.org/2025/1129"
+        },
+        {
+          "value": "Ivy K. Y. Woo",
+          "value_citation": "https://eprint.iacr.org/2025/1129"
+        }
+      ],
+      "abstract": "Indistinguishability obfuscation (iO) turns a program unintelligible without altering its functionality and is a powerful cryptographic primitive that captures the power of most known primitives. Recent breakthroughs have successfully constructed iO from well-founded computational assumptions, yet these constructions are unfortunately insecure against quantum adversaries. In the search of post-quantum secure iO, a line of research investigates constructions from fully homomorphic encryption (FHE) and tailored decryption hint release mechanisms. Proposals in this line mainly differ in their designs of decryption hints, yet all known attempts either cannot be proven from a self-contained computational assumption, or are based on novel lattice assumptions which are subsequently cryptanalysed. In this work, we propose a new plausibly post-quantum secure construction of iO by designing a new mechanism for releasing decryption hints. Unlike prior attempts, our decryption hints follow a public Gaussian distribution subject to decryption correctness constraints and are therefore in a sense as random as they could be. To generate such hints efficiently, we develop a general-purpose tool called primal lattice trapdoors, which allow sampling trapdoored matrices whose Learning with Errors (LWE) secret can be equivocated. We prove the security of our primal lattice trapdoors construction from the NTRU assumption. The security of the iO construction is then argued, along with other standard lattice assumptions, via a new Equivocal LWE assumption, for which we provide evidence for plausibility and identify potential targets for further cryptanalysis.",
+      "abstract_citation": "https://eprint.iacr.org/2025/1129",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2025/1129"
+    },
+    {
+      "title": "Homomorphic Signature-based Witness Encryption and Applications",
+      "title_citation": "https://eprint.iacr.org/2025/443",
+      "authors": [
+        {
+          "value": "Alireza Kavousi",
+          "value_citation": "https://eprint.iacr.org/2025/443"
+        },
+        {
+          "value": "István András Seres",
+          "value_citation": "https://eprint.iacr.org/2025/443"
+        }
+      ],
+      "abstract": "Signature-based witness encryption (SWE) schemes recently emerged as a viable alternative to instantiate timed-release cryptography in the honest majority setting. In particular, assuming threshold trust in a set of parties that release signatures at a specified time, one can ``encrypt to the future'' using an SWE scheme. Applications of SWE schemes include voting, auctions, distributed randomness beacons, and more. However, the lack of homomorphism in existing schemes reduces efficiency and hinders deployment. In this work, we introduce the notion of homomorphic SWE (HSWE) to improve the practicality of timed-release encryption schemes. We show one can build HSWE using a pair of encryption and signature schemes where the uniqueness of the signature is required when the encryption relies on injective one-way functions. We then build three HSWE schemes in various settings using BLS, RSA, and Rabin signatures and show how to achieve a privacy-preserving variant that only allows extracting the homomorphically aggregated result while keeping the individual plaintexts confidential.",
+      "abstract_citation": "https://eprint.iacr.org/2025/443",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2025/443"
+    },
+    {
+      "title": "Attribute-Based Encryption for Circuits from Multilinear Maps",
+      "title_citation": "https://eprint.iacr.org/2013/128",
+      "authors": [
+        {
+          "value": "Sanjam Garg",
+          "value_citation": "https://eprint.iacr.org/2013/128"
+        },
+        {
+          "value": "Craig Gentry",
+          "value_citation": "https://eprint.iacr.org/2013/128"
+        },
+        {
+          "value": "Shai Halevi",
+          "value_citation": "https://eprint.iacr.org/2013/128"
+        },
+        {
+          "value": "Amit Sahai",
+          "value_citation": "https://eprint.iacr.org/2013/128"
+        },
+        {
+          "value": "Brent Waters",
+          "value_citation": "https://eprint.iacr.org/2013/128"
+        }
+      ],
+      "abstract": "In this work, we provide the first construction of Attribute-Based Encryption (ABE) for general circuits. Our construction is based on the existence of multilinear maps. We prove selective security of our scheme in the standard model under the natural multilinear generalization of the BDDH assumption. Our scheme achieves both Key-Policy and Ciphertext-Policy variants of ABE. Our scheme and its proof of security directly translate to the recent multilinear map framework of Garg, Gentry, and Halevi. This paper is the result of a merge of the works of Garg, Genry, and Halevi and of Sahai and Waters, and subsumes both these works.",
+      "abstract_citation": "https://eprint.iacr.org/2013/128",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2013/128"
+    },
+    {
+      "title": "The MMap Strikes Back: Obfuscation and New Multilinear Maps Immune to CLT13 Zeroizing Attacks",
+      "title_citation": "https://eprint.iacr.org/2017/946",
+      "authors": [
+        {
+          "value": "Fermi Ma",
+          "value_citation": "https://eprint.iacr.org/2017/946"
+        },
+        {
+          "value": "Mark Zhandry",
+          "value_citation": "https://eprint.iacr.org/2017/946"
+        }
+      ],
+      "abstract": "All known multilinear map candidates have suffered from a class of attacks known as \"zeroizing\" attacks, which render them unusable for many applications. We provide a new construction of polynomial-degree multilinear maps and show that our scheme is provably immune to zeroizing attacks under a strengthening of the Branching Program Un-Annihilatability Assumption (Garg et al., TCC 2016-B). Concretely, we build our scheme on top of the CLT13 multilinear maps (Coron et al., CRYPTO 2013). In order to justify the security of our new scheme, we devise a weak multilinear map model for CLT13 that captures zeroizing attacks and generalizations, reflecting all known classical polynomial-time attacks on CLT13. In our model, we show that our new multilinear map scheme achieves ideal security, meaning no known attacks apply to our scheme. Using our scheme, we give a new multiparty key agreement protocol that is several orders of magnitude more efficient that what was previously possible. We also demonstrate the general applicability of our model by showing that several existing obfuscation and order-revealing encryption schemes, when instantiated with the CLT13 maps, are secure against known attacks. These are schemes that are actually being implemented for experimentation, but until our work had no rigorous justification for security.",
+      "abstract_citation": "https://eprint.iacr.org/2017/946",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2017/946"
+    },
+    {
+      "title": "A Framework for Witness Encryption from Linearly Verifiable SNARKs and Applications",
+      "title_citation": "https://eprint.iacr.org/2025/1364",
+      "authors": [
+        {
+          "value": "Sanjam Garg",
+          "value_citation": "https://eprint.iacr.org/2025/1364"
+        },
+        {
+          "value": "Mohammad Hajiabadi",
+          "value_citation": "https://eprint.iacr.org/2025/1364"
+        },
+        {
+          "value": "Dimitris Kolonelos",
+          "value_citation": "https://eprint.iacr.org/2025/1364"
+        },
+        {
+          "value": "Abhiram Kothapalli",
+          "value_citation": "https://eprint.iacr.org/2025/1364"
+        },
+        {
+          "value": "Guru-Vamsi Policharla",
+          "value_citation": "https://eprint.iacr.org/2025/1364"
+        }
+      ],
+      "abstract": "Witness Encryption (WE) is a powerful cryptographic primitive, enabling applications that would otherwise appear infeasible. While general-purpose WE requires strong cryptographic assumptions, and is highly inefficient, recent works have demonstrated that it is possible to design special-purpose WE schemes for targeted applications that can be built from weaker assumptions and can also be concretely efficient. Despite the plethora of constructions in the literature that (implicitly) use witness encryption schemes, there has been no systematic study of special purpose witness encryption schemes. In this work we make progress towards this goal by designing a modular and extensible framework, which allows us to better understand existing schemes and further enables us to construct new witness encryption schemes. The framework is designed around simple but powerful building blocks that we refer to as \"gadgets\". Gadgets can be thought of as witness encryption schemes for small targeted relations (induced by linearly verifiable arguments) but they can be composed with each other to build larger, more expressive relations that are useful in applications. To highlight the power of our framework we methodically recover past results, improve upon them and even provide new feasibility results. The first application of our framework is a Registered Attribute-Based Encryption Scheme [Hohenberger et al. (Eurocrypt 23)] with linear sized common reference string (CRS). Numerous Registered Attribute-Based Encryption (R-ABE) constructions have introduced though a black-box R-ABE construction with a linear--in the number of users--CRS has been a persistent open problem, with the state-of-the-art concretely being N^{1.58} (Garg et al. [GLWW, CRYPTO 24]). Empowered by our Witness Encryption framework we provide the first construction of black-box R-ABE with linear-sized CRS. Our construction is based on a novel realization of encryption for DNF formulas that leverages encryption for set membership. Our second application is a feasibility result for Registered Threshold Encryption (RTE) with succinct ciphertexts. RTE (Branco et al. [ASIACRYPT 2024] is an analogue of the recently introduced Silent Threshold Encryption (Garg et al. [GKPW, CRYPTO 24]) in the Registered Setting. We revisit Registered Threshold Encryption and provide an efficient construction, with constant-sized encryption key and ciphertexts, that makes use of our WE framework.",
+      "abstract_citation": "https://eprint.iacr.org/2025/1364",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2025/1364"
+    },
+    {
+      "title": "Non-Trivial Witness Encryption and Null-iO from Standard Assumptions",
+      "title_citation": "https://eprint.iacr.org/2017/874",
+      "authors": [
+        {
+          "value": "Zvika Brakerski",
+          "value_citation": "https://eprint.iacr.org/2017/874"
+        },
+        {
+          "value": "Aayush Jain",
+          "value_citation": "https://eprint.iacr.org/2017/874"
+        },
+        {
+          "value": "Ilan Komargodski",
+          "value_citation": "https://eprint.iacr.org/2017/874"
+        },
+        {
+          "value": "Alain Passelegue",
+          "value_citation": "https://eprint.iacr.org/2017/874"
+        },
+        {
+          "value": "Daniel Wichs",
+          "value_citation": "https://eprint.iacr.org/2017/874"
+        }
+      ],
+      "abstract": "A witness encryption (WE) scheme can take any NP statement as a public-key and use it to encrypt a message. If the statement is true then it is possible to decrypt the message given a corresponding witness, but if the statement is false then the message is computationally hidden. Ideally, the encryption procedure should run in polynomial time, but it is also meaningful to define a weaker notion, which we call non-trivially exponentially efficient WE (XWE), where the encryption run-time is only required to be much smaller than the trivial 2m bound for NP relations with witness size m. We show how to construct such XWE schemes for all of NP with encryption run-time 2m/2 under the sub-exponential learning with errors (LWE) assumption. For NP relations that can be verified in NC1 (e.g., SAT) we can also construct such XWE schemes under the sub-exponential Decisional Bilinear Diffie-Hellman (DBDH) assumption. Although we find the result surprising, it follows via a very simple connection to attribute-based encryption. We also show how to upgrade the above results to get non-trivially exponentially efficient indistinguishability obfuscation for null circuits (niO), which guarantees that the obfuscations of any two circuits that always output 0 are indistinguishable. In particular, under the LWE assumptions we get a XniO scheme where the obfuscation time is 2n/2 for all circuits with input size n. It is known that in the case of indistinguishability obfuscation (iO) for all circuits, non-trivially efficient XiO schemes imply fully efficient iO schemes (Lin et al., PKC '16) but it remains as a fascinating open problem whether any such connection exists for WE or niO. Lastly, we explore a potential approach toward constructing fully efficient WE and niO schemes via multi-input ABE.",
+      "abstract_citation": "https://eprint.iacr.org/2017/874",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2017/874"
+    },
+    {
+      "title": "Streaming Functional Encryption",
+      "title_citation": "https://eprint.iacr.org/2022/1599",
+      "authors": [
+        {
+          "value": "Jiaxin Guan",
+          "value_citation": "https://eprint.iacr.org/2022/1599"
+        },
+        {
+          "value": "Alexis Korb",
+          "value_citation": "https://eprint.iacr.org/2022/1599"
+        },
+        {
+          "value": "Amit Sahai",
+          "value_citation": "https://eprint.iacr.org/2022/1599"
+        }
+      ],
+      "abstract": "We initiate the study of streaming functional encryption (sFE) which is designed for scenarios in which data arrives in a streaming manner and is computed on in an iterative manner as the stream arrives. Unlike in a standard functional encryption (FE) scheme, in an sFE scheme, we (1) do not require the entire data set to be known at encryption time and (2) allow for partial decryption given only a prefix of the input. More specifically, in an sFE scheme, we can sequentially encrypt each data point in a stream of data as it arrives, without needing to wait for all values. We can then generate function keys for streaming functions which are stateful functions that take as input a message and a state and output a value and the next state. For any i, a user with a function key for a streaming function f can learn the first i output values where the state is updated and given only ciphertexts for the first i elements. In this work, we introduce the notion of sFE and show how to construct it from FE. In particular, we show how to achieve a secure sFE scheme for P/poly from a compact, secure FE scheme for P/poly, where our security notion for sFE is similar to standard FE security except that we require all function queries to be made before the challenge ciphertext query. Furthermore, by combining our result with the FE construction of Jain, Lin, and Sahai (STOC, 2022), we show how to achieve a secure sFE scheme for P/poly from the polynomial hardness of well-studied assumptions.",
+      "abstract_citation": "https://eprint.iacr.org/2022/1599",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2022/1599"
+    },
+    {
+      "title": "Upgrading to Functional Encryption",
+      "title_citation": "https://eprint.iacr.org/2018/281",
+      "authors": [
+        {
+          "value": "Saikrishna Badrinarayanan",
+          "value_citation": "https://eprint.iacr.org/2018/281"
+        },
+        {
+          "value": "Dakshita Khurana",
+          "value_citation": "https://eprint.iacr.org/2018/281"
+        },
+        {
+          "value": "Amit Sahai",
+          "value_citation": "https://eprint.iacr.org/2018/281"
+        },
+        {
+          "value": "Brent Waters",
+          "value_citation": "https://eprint.iacr.org/2018/281"
+        }
+      ],
+      "abstract": "The notion of Functional Encryption (FE) has recently emerged as a strong primitive with several exciting applications. In this work, we initiate the study of the following question: Can existing public key encryption schemes be \"upgraded\" to Functional Encryption schemes without changing their public keys or the encryption algorithm? We call a public-key encryption with this property to be FE-compatible. Indeed, assuming ideal obfuscation, it is easy to see that every CCA-secure public-key encryption scheme is FE-compatible. Despite the recent success in using indistinguishability obfuscation to replace ideal obfuscation for many applications, we show that this phenomenon most likely will not apply here. We show that assuming fully homomorphic encryption and the learning with errors (LWE) assumption, there exists a CCA-secure encryption scheme that is provably not FE-compatible. We also show that a large class of natural CCA-secure encryption schemes proven secure in the random oracle model are not FE-compatible in the random oracle model. Nevertheless, we identify a key structure that, if present, is sufficient to provide FE-compatibility. Specifically, we show that assuming sub-exponentially secure iO and sub-exponentially secure one way functions, there exists a class of public key encryption schemes which we call Special-CCA secure encryption schemes that are in fact, FE-compatible.",
+      "abstract_citation": "https://eprint.iacr.org/2018/281",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2018/281"
+    },
+    {
+      "title": "On Witness Encryption and Laconic Zero-Knowledge Arguments",
+      "title_citation": "https://eprint.iacr.org/2024/1932",
+      "authors": [
+        {
+          "value": "Yanyi Liu",
+          "value_citation": "https://eprint.iacr.org/2024/1932"
+        },
+        {
+          "value": "Noam Mazor",
+          "value_citation": "https://eprint.iacr.org/2024/1932"
+        },
+        {
+          "value": "Rafael Pass",
+          "value_citation": "https://eprint.iacr.org/2024/1932"
+        }
+      ],
+      "abstract": "Witness encryption (WE) (Garg et al, STOC’13) is a powerful cryptographic primitive that is closely related to the notion of indistinguishability obfuscation (Barak et, JACM’12, Garg et al, FOCS’13). For a given NP-language L, WE for L enables encrypting a message m using an instance x as the public-key, while ensuring that efficient decryption is possible by anyone possessing a witness for x ∈ L, and if x∉ L, then the encryption is hiding. We show that this seemingly sophisticated primitive is equivalent to a communication-efficient version of one of the most classic cryptographic primitives—namely that of a zero-knowledge argument (Goldwasser et al, SIAM’89, Brassard et al, JCSS’88): for any NP-language L, the following are equivalent: - There exists a witness encryption for L; - There exists a laconic (i.e., the prover communication is bounded by O(log n)) special-honest verifier zero-knowledge (SHVZK) argument for L. Our approach is inspired by an elegant (one-sided) connection between (laconic) zero-knowledge arguments and public-key encryption established by Berman et al (CRYPTO’17) and Cramer-Shoup (EuroCrypt’02), and the equivalence between a notion of so-called “predictable arguments” and witness encryption by Faonio, Nielsen, and Venturi (PKC’17).",
+      "abstract_citation": "https://eprint.iacr.org/2024/1932",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2024/1932"
+    },
+    {
+      "title": "Witness Encryption from Garbled Circuit and Multikey Fully Homomorphic Encryption Techniques",
+      "title_citation": "https://eprint.iacr.org/2020/1502",
+      "authors": [
+        {
+          "value": "Kamil Kluczniak",
+          "value_citation": "https://eprint.iacr.org/2020/1502"
+        }
+      ],
+      "abstract": "In a witness encryption scheme, to decrypt a ciphertext associated with an NP statement, the decrypter takes as input a witness testifying that the statement is in the language. When the statement is not in the language, then the message is hidden. Thus far, the only provably secure constructions assume the existence of indistinguishability obfuscation (iO) and multilinear maps (MMaps). We make progress towards building polynomially efficient witness encryption for NP without resorting to iO or MMaps. In particular, we give a witness encryption scheme from Yao's garbled circuit technique and a new type of fully homomorphic encryption (FHE) that we call annihilating. Interestingly, we require a version of the annihilating FHE that is circularly insecure, i.e., allows testing the presence of a key cycle. We prove our witness encryption's security from a novel assumption about our annihilating FHE. We formulate the assumption as an interplay between an annihilating FHE and ideal ciphers. We show a candidate (leveled) annihilating FHE built from a multikey variant of the BGV/BFV fully homomorphic cryptosystems.",
+      "abstract_citation": "https://eprint.iacr.org/2020/1502",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2020/1502"
+    },
+    {
+      "title": "Succinct Witness Encryption for Batch Languages and Applications",
+      "title_citation": "https://eprint.iacr.org/2025/944",
+      "authors": [
+        {
+          "value": "Lalita Devadas",
+          "value_citation": "https://eprint.iacr.org/2025/944"
+        },
+        {
+          "value": "Abhishek Jain",
+          "value_citation": "https://eprint.iacr.org/2025/944"
+        },
+        {
+          "value": "Brent Waters",
+          "value_citation": "https://eprint.iacr.org/2025/944"
+        },
+        {
+          "value": "David J. Wu",
+          "value_citation": "https://eprint.iacr.org/2025/944"
+        }
+      ],
+      "abstract": "Witness encryption allows one to encrypt a message to an NP relation R and a statement x. The corresponding decryption key is any valid NP witness w. In a succinct witness encryption scheme, we require that the size of the ciphertext be sublinear in the size of the NP relation. Currently, all realizations of succinct witness encryption for NP rely on strong assumptions such as pseudorandom obfuscation, extractable witness encryption, or differing-inputs obfuscation. Notably, none of these notions are known from standard assumptions. In this work, we consider a relaxation of succinct witness encryption for NP to the setting of batch NP. In this setting, one encrypts to an NP relation R together with K statements x1,…,xK. In the basic version, one can decrypt if they have a witness w1,…,wK for all K statements. The succinctness requirement is that the size of the ciphertext should be sublinear in the number of instances K, but is allowed to grow with the size of the NP relation (i.e., the size of a single instance). More generally, we can also impose a (monotone) policy P:{0,1}K→{0,1} over the K instances. In this case, decryption is possible only if there exists w1,…,wK such that P(R(x1,w1),…,R(xK,wK))=1. In this work, we initiate a systematic study of succinct witness encryption for batch languages. We start with two simple constructions that support CNF and DNF policies based on plain witness encryption in conjunction with a somewhere statistically sound batch argument for NP or a function-binding hash function. Then, using indistinguishability obfuscation, we show how to support policies that can be computed by read-once bounded-space Turing machines. The latter construction is in fact a unique witness map for monotone-policy batch NP, and as such, also gives a SNARG for monotone-policy batch NP where the size of the common reference string is sublinear in the number of instances. Finally, we demonstrate some immediate applications of succinct witness encryption for batch languages. We construct new succinct computational secret sharing schemes for CNFs, DNFs, and weighted threshold policies. We also show how to build distributed monotone-policy encryption, a notion that generalizes recent trustless primitives like distributed broadcast encryption and threshold encryption with silent setup.",
+      "abstract_citation": "https://eprint.iacr.org/2025/944",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2025/944"
+    },
+    {
+      "title": "Candidate Multilinear Maps from Ideal Lattices",
+      "title_citation": "https://eprint.iacr.org/2012/610",
+      "authors": [
+        {
+          "value": "Sanjam Garg",
+          "value_citation": "https://eprint.iacr.org/2012/610"
+        },
+        {
+          "value": "Craig Gentry",
+          "value_citation": "https://eprint.iacr.org/2012/610"
+        },
+        {
+          "value": "Shai Halevi",
+          "value_citation": "https://eprint.iacr.org/2012/610"
+        }
+      ],
+      "abstract": "We describe plausible lattice-based constructions with properties that approximate the sought-after multilinear maps in hard-discrete-logarithm groups, and show an example application of such multilinear maps that can be realized using our approximation. The security of our constructions relies on seemingly hard problems in ideal lattices, which can be viewed as extensions of the assumed hardness of the NTRU function.",
+      "abstract_citation": "https://eprint.iacr.org/2012/610",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2012/610"
+    },
+    {
+      "title": "Efficient Multilinear Map from Graded Encoding Scheme",
+      "title_citation": "https://eprint.iacr.org/2021/014",
+      "authors": [
+        {
+          "value": "Majid Salimi",
+          "value_citation": "https://eprint.iacr.org/2021/014"
+        }
+      ],
+      "abstract": "Though the multilinear maps have many cryptographic applications, secure and efficient construction of such maps is an open problem. Many multilinear maps like GGH, GGH15, CLT, and CLT15 have been and are being proposed, while none of them is both secure and efficient. The construction of some multilinear maps is based on the Graded Encoding Scheme (GES), where, the necessity of announcing zero-testing parameter and encoding of zero has destroyed the security of the multilinear map. Attempt is made to propose a new GES, where, instead of encoding an element, the users can obtain the encoding of an associated but unknown random element. In this new setting, there is no need to publish the encodings of zero and one. This new GES provides the actual functionality of the usual GES and can be applied in constructing a secure and efficient multilinear map and a multi-party non-interactive key exchange (MP-NIKE) scheme. We also improve the MP-NIKE scheme and turn it into an ID-based MP-NIKE scheme.",
+      "abstract_citation": "https://eprint.iacr.org/2021/014",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2021/014"
+    },
+    {
+      "title": "Towards general-purpose program obfuscation via local mixing",
+      "title_citation": "https://eprint.iacr.org/2024/006",
+      "authors": [
+        {
+          "value": "Ran Canetti",
+          "value_citation": "https://eprint.iacr.org/2024/006"
+        },
+        {
+          "value": "Claudio Chamon",
+          "value_citation": "https://eprint.iacr.org/2024/006"
+        },
+        {
+          "value": "Eduardo Mucciolo",
+          "value_citation": "https://eprint.iacr.org/2024/006"
+        },
+        {
+          "value": "Andrei Ruckenstein",
+          "value_citation": "https://eprint.iacr.org/2024/006"
+        }
+      ],
+      "abstract": "We explore the possibility of obtaining general-purpose obfuscation for all circuits by way of making only simple, local, functionality preserving random perturbations in the circuit structure. Towards this goal, we use the additional structure provided by reversible circuits, but no additional algebraic structure. We start by formulating a new (and relatively weak) obfuscation task regarding the ability to obfuscate random circuits of bounded length. We call such obfuscators random input & output (RIO) obfuscators. We then show how to construct indistinguishability obfuscators for all (unbounded length) circuits given only an RIO obfuscator --- under a new assumption regarding the pseudorandomness of sufficiently long random reversible circuits with known functionality, which in turn builds on a conjecture made by Gowers (Comb. Prob. Comp. '96) regarding the pseudorandomness of bounded-size random reversible circuits. Furthermore, the constructed obfuscators satisfy a new measure of security - called random output indistinguishability (ROI) obfuscation - which is significantly stronger than IO and may be of independent interest. We then investigate the possibility of constructing RIO obfuscators using local, functionality preserving perturbations. Our approach is rooted in statistical mechanics and can be thought of as locally \"thermalizing\" a circuit while preserving its functionality. We provide candidate constructions along with a pathway for analyzing the security of such strategies. Given the power of program obfuscation, viability of the proposed approach would provide an alternative route to realizing almost all cryptographic tasks under hardness assumptions that are very different from standard ones. Furthermore, our specific candidate obfuscators are relatively efficient: the obfuscated version of an n-wire, m-gate (reversible) circuit with security parameter k has n wires and poly(n,k)m gates. We hope that our initial exploration will motivate further study of this alternative path to cryptography.",
+      "abstract_citation": "https://eprint.iacr.org/2024/006",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2024/006"
+    },
+    {
+      "title": "Multilinear Maps from Obfuscation",
+      "title_citation": "https://eprint.iacr.org/2015/780",
+      "authors": [
+        {
+          "value": "Martin R. Albrecht",
+          "value_citation": "https://eprint.iacr.org/2015/780"
+        },
+        {
+          "value": "Pooya Farshim",
+          "value_citation": "https://eprint.iacr.org/2015/780"
+        },
+        {
+          "value": "Shuai Han",
+          "value_citation": "https://eprint.iacr.org/2015/780"
+        },
+        {
+          "value": "Dennis Hofheinz",
+          "value_citation": "https://eprint.iacr.org/2015/780"
+        },
+        {
+          "value": "Enrique Larraia",
+          "value_citation": "https://eprint.iacr.org/2015/780"
+        },
+        {
+          "value": "Kenneth G. Paterson",
+          "value_citation": "https://eprint.iacr.org/2015/780"
+        }
+      ],
+      "abstract": "We provide constructions of multilinear groups equipped with natural hard problems from indistinguishability obfuscation, homomorphic encryption, and NIZKs. This complements known results on the constructions of indistinguishability obfuscators from multilinear maps in the reverse direction. We provide two distinct, but closely related constructions and show that multilinear analogues of the DDH assumption hold for them. Our first construction is symmetric and comes with a \\kappa-linear map e : G^\\kappa \\to G_T for prime-order groups G and G_T . To establish the hardness of the \\kappa-linear DDH problem, we rely on the existence of a base group for which the \\kappa-strong DDH assumption holds. Our second construction is for the asymmetric setting, where e : G_1 \\times \\dots \\times G_\\kappa \\to G_T for a collection of \\kappa + 1 prime-order groups G_i and G_T , and relies only on the 1-strong DDH assumption in its base group. In both constructions the linearity \\kappa can be set to any arbitrary but a priori fixed polynomial value in the security parameter. We rely on a number of powerful tools in our constructions: probabilistic indistinguishability obfuscation, dual-mode NIZK proof systems (with perfect soundness, witness indistinguishability and zero knowledge), and additively homomorphic encryption for the group Z^+_N . At a high level, we enable “bootstrapping” multilinear assumptions from their simpler counterparts in standard cryptographic groups, and show the equivalence of PIO and multilinear maps under the existence of the aforementioned primitives.",
+      "abstract_citation": "https://eprint.iacr.org/2015/780",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2015/780"
+    },
+    {
+      "title": "5Gen-C: Multi-input Functional Encryption and Program Obfuscation for Arithmetic Circuits",
+      "title_citation": "https://eprint.iacr.org/2017/826",
+      "authors": [
+        {
+          "value": "Brent Carmer",
+          "value_citation": "https://eprint.iacr.org/2017/826"
+        },
+        {
+          "value": "Alex J. Malozemoff",
+          "value_citation": "https://eprint.iacr.org/2017/826"
+        },
+        {
+          "value": "Mariana Raykova",
+          "value_citation": "https://eprint.iacr.org/2017/826"
+        }
+      ],
+      "abstract": "Program obfuscation is a powerful security primitive with many applications. White-box cryptography studies a particular subset of program obfuscation targeting keyed pseudorandom functions (PRFs), a core component of systems such as mobile payment and digital rights management. Although the white-box obfuscators currently used in practice do not come with security proofs and are thus routinely broken, recent years have seen an explosion of cryptographic techniques for obfuscation, with the goal of avoiding this build-and-break cycle. In this work, we explore in detail cryptographic program obfuscation and the related primitive of multi-input functional encryption (MIFE). In particular, we extend the 5Gen framework (CCS 2016) to support circuit-based MIFE and program obfuscation, implementing both existing and new constructions. We then evaluate and compare the efficiency of these constructions in the context of PRF obfuscation. As part of this work we (1) introduce a novel instantiation of MIFE that works directly on functions represented as arithmetic circuits, (2) use a known transformation from MIFE to obfuscation to give us an obfuscator that performs better than all prior constructions, and (3) develop a compiler for generating circuits optimized for our schemes. Finally, we provide detailed experiments, demonstrating, among other things, the ability to obfuscate a PRF with a 64-bit key and 12 bits of input (containing 62k gates) in under 4 hours, with evaluation taking around 1 hour. This is by far the most complex function obfuscated to date.",
+      "abstract_citation": "https://eprint.iacr.org/2017/826",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2017/826"
+    },
+    {
+      "title": "R3PO: Reach-Restricted Reactive Program Obfuscation and its Application to MA-ABE",
+      "title_citation": "https://eprint.iacr.org/2024/119",
+      "authors": [
+        {
+          "value": "Kaartik Bhushan",
+          "value_citation": "https://eprint.iacr.org/2024/119"
+        },
+        {
+          "value": "Sai Lakshmi Bhavana Obbattu",
+          "value_citation": "https://eprint.iacr.org/2024/119"
+        },
+        {
+          "value": "Manoj Prabhakaran",
+          "value_citation": "https://eprint.iacr.org/2024/119"
+        },
+        {
+          "value": "Rajeev Raghunath",
+          "value_citation": "https://eprint.iacr.org/2024/119"
+        }
+      ],
+      "abstract": "In recent breakthrough results, novel use of garbled circuits yielded constructions for several primitives like Identity-Based Encryption (IBE) and 2-round secure multi-party computation, based on standard assumptions in public-key cryptography. While the techniques in these different results have many common elements, these works did not offer a modular abstraction that could be used across them. Our main contribution is to introduce a novel notion of obfuscation, called Reach-Restricted Reactive Program Obfuscation (R3PO) that captures the essence of these constructions, and exposes additional capabilities. We provide a powerful composition theorem whose proof fully encapsulates the use of garbled circuits in these works. As an illustration of the potential of R3PO, and as an important contribution of independent interest, we present a variant of Multi-Authority Attribute-Based Encryption (MA-ABE) that can be based on (single-authority) CP-ABE in a blackbox manner, using only standard cryptographic assumptions (e.g., DDH). This is in stark contrast to the existing constructions for MA-ABE, which rely on the random oracle model and/or support only limited policy classes.",
+      "abstract_citation": "https://eprint.iacr.org/2024/119",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2024/119"
+    },
+    {
+      "title": "Definitional Issues in Functional Encryption",
+      "title_citation": "https://eprint.iacr.org/2010/556.pdf",
+      "authors": [
+        {
+          "value": "Adam O’Neill",
+          "value_citation": "https://eprint.iacr.org/2010/556.pdf"
+        }
+      ],
+      "abstract": "We provide a formalization of the emergent notion of “functional encryption,” as well as introduce various security notions for it, and study relations among the latter. In particular, we show that indistinguishability and semantic security based notions of security are inequivalent for functional encryption in general; in fact, “adaptive” indistinguishability does not even imply “non-adaptive” semantic security. This is alarming given the large body of work employing (special cases of) the former. We go on to show, however, that in the “non-adaptive” case an equivalence does hold between indistinguishability and semantic security for what we call preimage sampleable schemes. We take this as evidence that for preimage sampleable schemes an indistinguishability based notion may be acceptable in practice. We show that some common functionalities considered in the literature satisfy this requirement.",
+      "abstract_citation": "https://eprint.iacr.org/2010/556.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2010/556.pdf"
+    },
+    {
+      "title": "Functional Encryption: Definitions and Challenges",
+      "title_citation": "https://eprint.iacr.org/2010/543.pdf",
+      "authors": [
+        {
+          "value": "Dan Boneh",
+          "value_citation": "https://eprint.iacr.org/2010/543.pdf"
+        },
+        {
+          "value": "Amit Sahai",
+          "value_citation": "https://eprint.iacr.org/2010/543.pdf"
+        },
+        {
+          "value": "Brent Waters",
+          "value_citation": "https://eprint.iacr.org/2010/543.pdf"
+        }
+      ],
+      "abstract": "We initiate the formal study of functional encryption by giving precise definitions of the concept and its security. Roughly speaking, functional encryption supports restricted secret keys that enable a key holder to learn a specific function of encrypted data, but learn nothing else about the data. For example, given an encrypted program the secret key may enable the key holder to learn the output of the program on a specific input without learning anything else about the program. We show that defining security for functional encryption is non-trivial. First, we show that a natural game-based definition is inadequate for some functionalities. We then present a natural simulation-based definition and show that it (provably) cannot be satisfied in the standard model, but can be satisfied in the random oracle model. We show how to map many existing concepts to our formalization of functional encryption and conclude with several interesting open problems in this young area.",
+      "abstract_citation": "https://eprint.iacr.org/2010/543.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2010/543.pdf"
+    },
+    {
+      "title": "Hierarchical Functional Encryption",
+      "title_citation": "https://eprint.iacr.org/2015/1011.pdf",
+      "authors": [
+        {
+          "value": "Zvika Brakerski",
+          "value_citation": "https://eprint.iacr.org/2015/1011.pdf"
+        },
+        {
+          "value": "Gil Segev",
+          "value_citation": "https://eprint.iacr.org/2015/1011.pdf"
+        }
+      ],
+      "abstract": "The paper studies hierarchical functional encryption, which extends functional encryption with delegation capabilities for more expressive access control. The authors present a generic transformation to convert any general-purpose public-key functional encryption scheme into a hierarchical one without additional assumptions. This demonstrates that the existence of functional encryption is equivalent to its hierarchical generalization. The resulting schemes offer various trade-offs between delegation capabilities (depth and width of hierarchical structures) and underlying assumptions, supporting arbitrary structures when starting with schemes secure against unbounded collusions.",
+      "abstract_citation": "https://eprint.iacr.org/2015/1011.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2015/1011.pdf"
+    },
+    {
+      "title": "Function-Private Functional Encryption in the Private-Key Setting",
+      "title_citation": "https://eprint.iacr.org/2014/550.pdf",
+      "authors": [
+        {
+          "value": "Zvika Brakerski",
+          "value_citation": "https://eprint.iacr.org/2014/550.pdf"
+        },
+        {
+          "value": "Gil Segev",
+          "value_citation": "https://eprint.iacr.org/2014/550.pdf"
+        }
+      ],
+      "abstract": "Functional encryption supports restricted decryption keys that allow users to learn specific functions of the encrypted messages. Although the vast majority of research on functional encryption has so far focused on the privacy of the encrypted messages, in many realistic scenarios it is crucial to offer privacy also for the functions for which decryption keys are provided. Whereas function privacy is inherently limited in the public-key setting, in the private-key setting it has a tremendous potential. We present a generic transformation that yields a function-private functional encryption scheme, starting with any non-function-private scheme for a sufficiently rich function class. Our transformation preserves the message privacy of the underlying scheme, and can be instantiated using a variety of existing schemes, including those based on Learning with Errors, obfuscation assumptions, simple multilinear-maps assumptions, or even any one-way function.",
+      "abstract_citation": "https://eprint.iacr.org/2014/550.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2014/550.pdf"
+    },
+    {
+      "title": "Offline Witness Encryption",
+      "title_citation": "https://eprint.iacr.org/2015/838.pdf",
+      "authors": [
+        {
+          "value": "Hamza Abusalah",
+          "value_citation": "https://eprint.iacr.org/2015/838.pdf"
+        },
+        {
+          "value": "Georg Fuchsbauer",
+          "value_citation": "https://eprint.iacr.org/2015/838.pdf"
+        },
+        {
+          "value": "Krzysztof Pietrzak",
+          "value_citation": "https://eprint.iacr.org/2015/838.pdf"
+        }
+      ],
+      "abstract": "Witness encryption (WE) lets a sender encrypt messages relative to NP instances x such that a witness w for x allows decryption. Current WE schemes rely on heavy cryptographic tools like multilinear maps or indistinguishability obfuscation (iO), making them impractical for constrained devices. We construct an 'offline' WE scheme where the computationally heavy work is moved to a one-time setup phase. Encryption is made efficient by simply computing a Naor-Yung ciphertext (two CPA encryptions and a NIZK proof). Our scheme achieves selective security assuming iO and statistically simulation-sound NIZK. We provide a concrete instantiation in bilinear groups where ciphertexts are approximately 1.3 kB at a 128-bit security level, making them suitable for implementation on smart cards. We also extend our construction to functional witness encryption (FWE).",
+      "abstract_citation": "https://eprint.iacr.org/2015/838.pdf",
+      "topic": "Witness Encryption",
+      "topic_citation": "https://eprint.iacr.org/2015/838.pdf"
+    },
+    {
+      "title": "Functional Encryption: New Perspectives and Lower Bounds",
+      "title_citation": "https://eprint.iacr.org/2012/468.pdf",
+      "authors": [
+        {
+          "value": "Shweta Agrawal",
+          "value_citation": "https://eprint.iacr.org/2012/468.pdf"
+        },
+        {
+          "value": "Sergey Gorbunov",
+          "value_citation": "https://eprint.iacr.org/2012/468.pdf"
+        },
+        {
+          "value": "Vinod Vaikuntanathan",
+          "value_citation": "https://eprint.iacr.org/2012/468.pdf"
+        },
+        {
+          "value": "Hoeteck Wee",
+          "value_citation": "https://eprint.iacr.org/2012/468.pdf"
+        }
+      ],
+      "abstract": "Functional encryption is an emerging paradigm for public-key encryption that enables fine-grained control of access to encrypted data. In this work, we present new perspectives on security definitions for functional encryption, as well as new lower bounds on what can be achieved. Our main contributions are as follows: We show a lower bound for functional encryption that satisfies a weak (non-adaptive) simulation-based security notion, via pseudo-random functions. This is the first lower bound that exploits unbounded collusions in an essential way. We put forth and discuss a simulation-based notion of security for functional encryption, with an unbounded simulator (called USIM). We show that this notion interpolates indistinguishability and simulation-based security notions, and has strong correlations to results and barriers in the zero-knowledge and multi-party computation literature.",
+      "abstract_citation": "https://eprint.iacr.org/2012/468.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2012/468.pdf"
+    },
+    {
+      "title": "Incremental Program Obfuscation",
+      "title_citation": "https://eprint.iacr.org/2015/997.pdf",
+      "authors": [
+        {
+          "value": "Sanjam Garg",
+          "value_citation": "https://eprint.iacr.org/2015/997.pdf"
+        },
+        {
+          "value": "Omkant Pandey",
+          "value_citation": "https://eprint.iacr.org/2015/997.pdf"
+        }
+      ],
+      "abstract": "This paper initiates a thorough investigation of incremental program obfuscation, where small changes to the underlying program translate into small changes to the corresponding obfuscated program. The authors show that simulation-based notions (VBB and VGB) cannot be incremental even for simple point functions. They then turn to indistinguishability-based notions, presenting two security definitions (weak and strong) and formulating the notion of incremental best-possible obfuscation (IBPO). The paper presents constructions for incremental program obfuscation based on general-purpose indistinguishability obfuscation and uses oblivious RAM (ORAM) to amplify security from weaker to stronger while maintaining incrementality.",
+      "abstract_citation": "https://eprint.iacr.org/2015/997.pdf",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2015/997.pdf"
+    },
+    {
+      "title": "Cryptanalysis of the New CLT Multilinear Map over the Integers",
+      "title_citation": "https://eprint.iacr.org/2016/135.pdf",
+      "authors": [
+        {
+          "value": "Jung Hee Cheon",
+          "value_citation": "https://eprint.iacr.org/2016/135.pdf"
+        },
+        {
+          "value": "Pierre-Alain Fouque",
+          "value_citation": "https://eprint.iacr.org/2016/135.pdf"
+        },
+        {
+          "value": "Changmin Lee",
+          "value_citation": "https://eprint.iacr.org/2016/135.pdf"
+        },
+        {
+          "value": "Brice Minaud",
+          "value_citation": "https://eprint.iacr.org/2016/135.pdf"
+        },
+        {
+          "value": "Hansol Ryu",
+          "value_citation": "https://eprint.iacr.org/2016/135.pdf"
+        }
+      ],
+      "abstract": "This article presents two polynomial attacks on the CLT15 multilinear map, which share ideas similar to the cryptanalysis of CLT13. Our attacks allow recovery of all secret parameters in time polynomial in the security parameter, and lead to a full break of the CLT15 multilinear map for virtually all applications. These attacks, the eigenvalue attack and the determinant attack, exploit an integer extraction procedure to overcome the new noise components introduced in CLT15. The paper concludes that CLT15 is either no more secure than the original CLT13 or can be fully broken due to the encodings of zero provided by its ladder structure.",
+      "abstract_citation": "https://eprint.iacr.org/2016/135.pdf",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2016/135.pdf"
+    },
+    {
+      "title": "Implementing Cryptographic Program Obfuscation",
+      "title_citation": "https://eprint.iacr.org/2014/779.pdf",
+      "authors": [
+        {
+          "value": "Daniel Apon",
+          "value_citation": "https://eprint.iacr.org/2014/779.pdf"
+        },
+        {
+          "value": "Yan Huang",
+          "value_citation": "https://eprint.iacr.org/2014/779.pdf"
+        },
+        {
+          "value": "Jonathan Katz",
+          "value_citation": "https://eprint.iacr.org/2014/779.pdf"
+        },
+        {
+          "value": "Alex J. Malozemoff",
+          "value_citation": "https://eprint.iacr.org/2014/779.pdf"
+        }
+      ],
+      "abstract": "Program obfuscation is the process of making a program “unintelligible” without changing the program’s underlying input/output behavior. Although there is a long line of work on heuristic techniques for obfuscation, such approaches do not provide any cryptographic guarantee on their effectiveness. A recent result by Garg et al. (FOCS 2013), however, shows that cryptographic program obfuscation is indeed possible based on a new primitive called a graded encoding scheme. In this work, we present the first implementation of such an obfuscator. We describe several challenges and optimizations we made along the way, present a detailed evaluation of our implementation, and discuss research problems that need to be addressed before such obfuscators can be used in practice.",
+      "abstract_citation": "https://eprint.iacr.org/2014/779.pdf",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2014/779.pdf"
+    },
+    {
+      "title": "Simple Functional Encryption Schemes for Inner Products",
+      "title_citation": "https://eprint.iacr.org/2015/017.pdf",
+      "authors": [
+        {
+          "value": "Michel Abdalla",
+          "value_citation": "https://eprint.iacr.org/2015/017.pdf"
+        },
+        {
+          "value": "Florian Bourse",
+          "value_citation": "https://eprint.iacr.org/2015/017.pdf"
+        },
+        {
+          "value": "Angelo De Caro",
+          "value_citation": "https://eprint.iacr.org/2015/017.pdf"
+        },
+        {
+          "value": "David Pointcheval",
+          "value_citation": "https://eprint.iacr.org/2015/017.pdf"
+        }
+      ],
+      "abstract": "Functional encryption is a new paradigm that allows users to finely control the amount of information that is revealed by a ciphertext to a given receiver. Recent papers have focused their attention on constructing schemes for general functionalities at expense of efficiency. Our goal, in this paper, is to construct functional encryption schemes for less general functionalities which are still expressive enough for practical scenarios. We propose a functional encryption scheme for the inner-product functionality, meaning that decrypting an encrypted vector x with a key for a vector y will reveal only <x, y> and nothing else, whose security is based on the DDH assumption. Despite the simplicity of this functionality, it is still useful in many contexts like descriptive statistics. In addition, we generalize our approach and present a generic scheme that can be instantiated, in addition, under the LWE assumption and offers various trade-offs in terms of expressiveness and efficiency.",
+      "abstract_citation": "https://eprint.iacr.org/2015/017.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2015/017.pdf"
+    },
+    {
+      "title": "Practical Multilinear Maps over the Integers",
+      "title_citation": "https://eprint.iacr.org/2013/183.pdf",
+      "authors": [
+        {
+          "value": "Jean-Sébastien Coron",
+          "value_citation": "https://eprint.iacr.org/2013/183.pdf"
+        },
+        {
+          "value": "Tancrède Lepoint",
+          "value_citation": "https://eprint.iacr.org/2013/183.pdf"
+        },
+        {
+          "value": "Mehdi Tibouchi",
+          "value_citation": "https://eprint.iacr.org/2013/183.pdf"
+        }
+      ],
+      "abstract": "Extending bilinear elliptic curve pairings to multilinear maps is a long-standing open problem. The first plausible construction of such multilinear maps has recently been described by Garg, Gentry and Halevi, based on ideal lattices. In this paper we describe a different construction that works over the integers instead of ideal lattices, similar to the DGHV fully homomorphic encryption scheme. We also describe a different technique for proving the full randomization of encodings: instead of Gaussian linear sums, we apply the classical leftover hash lemma over a quotient lattice. We show that our construction is relatively practical: for reasonable security parameters a one-round 7-party Diffie-Hellman key exchange requires less than 40 seconds per party. Moreover, in contrast with previous work, multilinear analogues of useful, base group assumptions like DLIN appear to hold in our setting.",
+      "abstract_citation": "https://eprint.iacr.org/2013/183.pdf",
+      "topic": "Multilinear Maps",
+      "topic_citation": "https://eprint.iacr.org/2013/183.pdf"
+    },
+    {
+      "title": "Auditable Obfuscation",
+      "title_citation": "https://eprint.iacr.org/2023/1476.pdf",
+      "authors": [
+        {
+          "value": "Shalini Banerjee",
+          "value_citation": "https://eprint.iacr.org/2023/1476.pdf"
+        },
+        {
+          "value": "Steven D. Galbraith",
+          "value_citation": "https://eprint.iacr.org/2023/1476.pdf"
+        }
+      ],
+      "abstract": "We introduce a new variant of malicious obfuscation. Our formalism is incomparable to the existing definitions by Canetti and Varia (TCC 2010), Canetti et al. (EUROCRYPT 2022) and Badrinarayanan et al. (ASIACRYPT 2016). We show that this concept is natural and applicable to obfuscation-as-a-service platforms. We next define a new notion called auditable obfuscation which provides security against malicious obfuscation. Finally, we construct a proof of concept of the developed notions based on well-studied theoretical obfuscation proposals.",
+      "abstract_citation": "https://eprint.iacr.org/2023/1476.pdf",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2023/1476.pdf"
+    },
+    {
+      "title": "Iron: Functional Encryption using Intel SGX",
+      "title_citation": "https://eprint.iacr.org/2016/1071.pdf",
+      "authors": [
+        {
+          "value": "Ben A Fisch",
+          "value_citation": "https://eprint.iacr.org/2016/1071.pdf"
+        },
+        {
+          "value": "Dhinakaran Vinayagamurthy",
+          "value_citation": "https://eprint.iacr.org/2016/1071.pdf"
+        },
+        {
+          "value": "Dan Boneh",
+          "value_citation": "https://eprint.iacr.org/2016/1071.pdf"
+        },
+        {
+          "value": "Sergey Gorbunov",
+          "value_citation": "https://eprint.iacr.org/2016/1071.pdf"
+        }
+      ],
+      "abstract": "Functional encryption (FE) is an extremely powerful cryptographic mechanism that lets an authorized entity compute on encrypted data, and learn the results in the clear. However, all current cryptographic instantiations for general FE are too impractical to be implemented. We build Iron, a practical and usable FE system using Intel’s recent Software Guard Extensions (SGX). We show that Iron can be applied to complex functionalities, and even for simple functions, outperforms the best known cryptographic schemes. We argue security by modeling FE in the context of hardware elements, and prove that Iron satisfies the security model.",
+      "abstract_citation": "https://eprint.iacr.org/2016/1071.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2016/1071.pdf"
+    },
+    {
+      "title": "Functional Encryption for Quadratic Functions, and Applications to Predicate Encryption",
+      "title_citation": "https://eprint.iacr.org/2016/1106.pdf",
+      "authors": [
+        {
+          "value": "Romain Gay",
+          "value_citation": "https://eprint.iacr.org/2016/1106.pdf"
+        }
+      ],
+      "abstract": "We present a functional encryption scheme based on standard assumptions where ciphertexts are associated with a tuple of values (x_1, ..., x_n), secret keys are associated with a degree-two polynomial, and decryption recovers P(x_1, ..., x_n). The ciphertext contains only O(n) group elements. Our scheme achieves selective security based on pairings and yields a new predicate encryption scheme that supports degree-two polynomial evaluation, generalizing prior works and improving efficiency for applications like constant depth boolean formulas and comparison predicates.",
+      "abstract_citation": "https://eprint.iacr.org/2016/1106.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2016/1106.pdf"
+    },
+    {
+      "title": "Program Obfuscation with Leaky Hardware",
+      "title_citation": "https://eprint.iacr.org/2011/660.pdf",
+      "authors": [
+        {
+          "value": "Nir Bitansky",
+          "value_citation": "https://eprint.iacr.org/2011/660.pdf"
+        },
+        {
+          "value": "Ran Canetti",
+          "value_citation": "https://eprint.iacr.org/2011/660.pdf"
+        },
+        {
+          "value": "Shafi Goldwasser",
+          "value_citation": "https://eprint.iacr.org/2011/660.pdf"
+        },
+        {
+          "value": "Shai Halevi",
+          "value_citation": "https://eprint.iacr.org/2011/660.pdf"
+        },
+        {
+          "value": "Yael Tauman Kalai",
+          "value_citation": "https://eprint.iacr.org/2011/660.pdf"
+        },
+        {
+          "value": "Guy N. Rothblum",
+          "value_citation": "https://eprint.iacr.org/2011/660.pdf"
+        }
+      ],
+      "abstract": "We consider general program obfuscation mechanisms using ’somewhat trusted’ hardware devices, with the goal of minimizing the usage of the hardware, its complexity, and the required trust. Specifically, our solution has the following properties: (i) The obfuscation remains secure even if all the hardware devices in use are leaky. That is, the adversary can obtain the result of evaluating any function on the local state of the device, as long as this function has short output. In addition the adversary also controls the communication between the devices. (ii) The number of hardware devices used in an obfuscation and the amount of work they perform are polynomial in the security parameter independently of the obfuscated function’s complexity. (iii) A (universal) set of hardware components, owned by the user, is initialized only once and from that point on can be used with multiple ‘software-based’ obfuscations sent by different vendors.",
+      "abstract_citation": "https://eprint.iacr.org/2011/660.pdf",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2011/660.pdf"
+    },
+    {
+      "title": "Diamond iO: A Straightforward Construction of Indistinguishability Obfuscation from Lattices",
+      "title_citation": "https://eprint.iacr.org/2025/236.pdf",
+      "authors": [
+        {
+          "value": "Sora Suegami",
+          "value_citation": "https://eprint.iacr.org/2025/236.pdf"
+        },
+        {
+          "value": "Enrico Bottazzi",
+          "value_citation": "https://eprint.iacr.org/2025/236.pdf"
+        },
+        {
+          "value": "Gayeong Park",
+          "value_citation": "https://eprint.iacr.org/2025/236.pdf"
+        }
+      ],
+      "abstract": "Indistinguishability obfuscation (iO) has seen remarkable theoretical progress, yet it remains impractical due to its high complexity and inefficiency. A common bottleneck in recent iO schemes is the reliance on bootstrapping techniques from functional encryption (FE) into iO, which requires recursively invoking the FE encryption algorithm for each input bit—creating a significant barrier to practical iO schemes. In this work, we propose diamond iO, a new lattice-based iO construction that replaces the costly recursive encryption process with lightweight matrix operations. Our construction is proven secure under the learning with errors (LWE) and evasive LWE assumptions, as well as our new assumption—all-product LWE—in the pseudorandom oracle model. By leveraging the FE scheme for pseudorandom functionalities introduced by Agrawal et al. (ePrint’24) in a non-black-box manner, we remove the reliance on prior FE-to-iO bootstrapping techniques and thereby significantly reduce complexity. We further show that a variant of the all-product LWE assumption reduces to standard LWE, and we argue that known attacks on evasive LWE do not threaten our construction.",
+      "abstract_citation": "https://eprint.iacr.org/2025/236.pdf",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2025/236.pdf"
+    },
+    {
+      "title": "Limits on the Power of Indistinguishability Obfuscation and Functional Encryption",
+      "title_citation": "https://eprint.iacr.org/2015/341.pdf",
+      "authors": [
+        {
+          "value": "Gilad Asharov",
+          "value_citation": "https://eprint.iacr.org/2015/341.pdf"
+        },
+        {
+          "value": "Gil Segev",
+          "value_citation": "https://eprint.iacr.org/2015/341.pdf"
+        }
+      ],
+      "abstract": "The paper presents a framework for proving meaningful negative results on the power of indistinguishability obfuscation and functional encryption. By considering these primitives for oracle-aided circuits, the authors capture common non-black-box techniques used in modern cryptographic constructions, such as the punctured programming approach. Using this framework, the paper proves several impossibility results: there is no fully black-box construction of a collision-resistant function family from an indistinguishability obfuscator, and no fully black-box construction of a key-agreement protocol with perfect completeness from a private-key functional encryption scheme. These results demonstrate that potential constructions must suffer from an exponential security loss, even when using sub-exponential security assumptions.",
+      "abstract_citation": "https://eprint.iacr.org/2015/341.pdf",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2015/341.pdf"
+    },
+    {
+      "title": "Multi-Input Functional Encryption",
+      "title_citation": "https://eprint.iacr.org/2013/774.pdf",
+      "authors": [
+        {
+          "value": "S. Dov Gordon",
+          "value_citation": "https://eprint.iacr.org/2013/774.pdf"
+        },
+        {
+          "value": "Jonathan Katz",
+          "value_citation": "https://eprint.iacr.org/2013/774.pdf"
+        },
+        {
+          "value": "Feng-Hao Liu",
+          "value_citation": "https://eprint.iacr.org/2013/774.pdf"
+        },
+        {
+          "value": "Elaine Shi",
+          "value_citation": "https://eprint.iacr.org/2013/774.pdf"
+        },
+        {
+          "value": "Hong-Sheng Zhou",
+          "value_citation": "https://eprint.iacr.org/2013/774.pdf"
+        }
+      ],
+      "abstract": "Functional encryption (FE) is a powerful primitive enabling fine-grained access to encrypted data. In an FE scheme, secret keys (“tokens”) correspond to functions; a user in possession of a ciphertext ct = Enc(x) and a token TK_f for the function f can compute f(x) but learn nothing else about x. In this work we introduce the notion of multi-input functional encryption. Here, informally, a user in possession of a token TK_f for an n-ary function f and multiple ciphertexts ct_1 = Enc(x_1), . . . , ct_n = Enc(x_n) can compute f(x_1, . . . , x_n) but nothing else about the x_i. Besides introducing the notion, we explore the feasibility of multi-input FE in the public-key and symmetric-key settings, with respect to both indistinguishability-based and simulation-based definitions of security.",
+      "abstract_citation": "https://eprint.iacr.org/2013/774.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2013/774.pdf"
+    },
+    {
+      "title": "Implementing Token-Based Obfuscation under (Ring) LWE",
+      "title_citation": "https://eprint.iacr.org/2018/1222.pdf",
+      "authors": [
+        {
+          "value": "Cheng Chen",
+          "value_citation": "https://eprint.iacr.org/2018/1222.pdf"
+        },
+        {
+          "value": "Nicholas Genise",
+          "value_citation": "https://eprint.iacr.org/2018/1222.pdf"
+        },
+        {
+          "value": "Daniele Micciancio",
+          "value_citation": "https://eprint.iacr.org/2018/1222.pdf"
+        },
+        {
+          "value": "Yuriy Polyakov",
+          "value_citation": "https://eprint.iacr.org/2018/1222.pdf"
+        },
+        {
+          "value": "Kurt Rohloff",
+          "value_citation": "https://eprint.iacr.org/2018/1222.pdf"
+        }
+      ],
+      "abstract": "Token-based obfuscation (TBO) is an interactive approach to cryptographic program obfuscation that was proposed as a potentially more practical alternative to conventional non-interactive security models. This work introduces a query-revealing variant of TBO and implements optimized constructions based on (Ring) LWE in the PALISADE library. The paper covers linear functions, conjunctions, and general branching programs, introducing algorithmic and code-level optimizations such as new trapdoor sampling algorithms for matrices of ring elements, Residue Number System (RNS) procedures, and faster token generation. The implementation achieves runtimes for branching programs two orders of magnitude smaller than prior work and provides a publicly available TBO toolkit.",
+      "abstract_citation": "https://eprint.iacr.org/2018/1222.pdf",
+      "topic": "Program Obfuscation",
+      "topic_citation": "https://eprint.iacr.org/2018/1222.pdf"
+    },
+    {
+      "title": "Functional Encryption for Randomized Functionalities",
+      "title_citation": "https://eprint.iacr.org/2013/729.pdf",
+      "authors": [
+        {
+          "value": "Vipul Goyal",
+          "value_citation": "https://eprint.iacr.org/2013/729.pdf"
+        },
+        {
+          "value": "Abhishek Jain",
+          "value_citation": "https://eprint.iacr.org/2013/729.pdf"
+        },
+        {
+          "value": "Venkata Koppula",
+          "value_citation": "https://eprint.iacr.org/2013/729.pdf"
+        },
+        {
+          "value": "Amit Sahai",
+          "value_citation": "https://eprint.iacr.org/2013/729.pdf"
+        }
+      ],
+      "abstract": "In this work, we present the first definitions and constructions for functional encryption supporting randomized functionalities. The setting of randomized functionalities require us to revisit functional encryption definitions by, for the first time, explicitly adding security requirements for dishonest encryptors, to ensure that they cannot improperly tamper with the randomness that will be used for computing outputs. Our constructions are built using indistinguishability obfuscation.",
+      "abstract_citation": "https://eprint.iacr.org/2013/729.pdf",
+      "topic": "Functional Encryption",
+      "topic_citation": "https://eprint.iacr.org/2013/729.pdf"
+    }
+  ]
+}
