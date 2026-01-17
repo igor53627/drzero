@@ -30,23 +30,65 @@ import sglang.srt.entrypoints.engine
 import torch
 import torch.distributed as dist
 from omegaconf import DictConfig
-from sglang.srt.managers.tokenizer_manager import (
-    ReleaseMemoryOccupationReqInput,
-    ResumeMemoryOccupationReqInput,
-    UpdateWeightsFromTensorReqInput,
-)
+try:
+    from sglang.srt.managers.tokenizer_manager import (
+        ReleaseMemoryOccupationReqInput,
+        ResumeMemoryOccupationReqInput,
+        UpdateWeightsFromTensorReqInput,
+    )
+except ImportError:
+    # Older sglang builds do not expose these request input classes.
+    # Provide minimal shims with the same attribute names used by the manager.
+    class ReleaseMemoryOccupationReqInput:  # type: ignore[no-redef]
+        def __init__(self, tags: Optional[list[str]] = None):
+            self.tags = tags
+
+    class ResumeMemoryOccupationReqInput:  # type: ignore[no-redef]
+        def __init__(self, tags: Optional[list[str]] = None):
+            self.tags = tags
+
+    class UpdateWeightsFromTensorReqInput:  # type: ignore[no-redef]
+        def __init__(
+            self,
+            serialized_named_tensors: list,
+            load_format: Optional[str] = None,
+            flush_cache: bool = True,
+        ):
+            self.serialized_named_tensors = serialized_named_tensors
+            self.load_format = load_format
+            self.flush_cache = flush_cache
 from sglang.srt.sampling.sampling_params import SamplingParams
 from sglang.srt.server_args import ServerArgs
-from sglang.srt.utils import (
-    MultiprocessingSerializer,
-    assert_pkg_version,
-    get_ip,
-    get_open_port,
-    is_cuda,
-    maybe_set_triton_cache_manager,
-    set_prometheus_multiproc_dir,
-    set_ulimit,
-)
+import socket
+import sglang.srt.utils as sgl_utils
+
+MultiprocessingSerializer = sgl_utils.MultiprocessingSerializer
+assert_pkg_version = sgl_utils.assert_pkg_version
+maybe_set_triton_cache_manager = getattr(sgl_utils, "maybe_set_triton_cache_manager", lambda: None)
+set_prometheus_multiproc_dir = getattr(sgl_utils, "set_prometheus_multiproc_dir", lambda: None)
+set_ulimit = getattr(sgl_utils, "set_ulimit", lambda: None)
+
+def get_ip() -> str:
+    if hasattr(sgl_utils, "get_ip"):
+        return sgl_utils.get_ip()
+    with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as s:
+        try:
+            s.connect(("8.8.8.8", 80))
+            return s.getsockname()[0]
+        except OSError:
+            return "127.0.0.1"
+
+def get_open_port() -> int:
+    if hasattr(sgl_utils, "get_open_port"):
+        return sgl_utils.get_open_port()
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.bind(("", 0))
+        return s.getsockname()[1]
+
+def is_cuda() -> bool:
+    if hasattr(sgl_utils, "is_cuda"):
+        return sgl_utils.is_cuda()
+    return torch.cuda.is_available()
 from tensordict import TensorDict
 from torch.distributed.device_mesh import DeviceMesh, init_device_mesh
 from torch.nn.utils.rnn import pad_sequence
